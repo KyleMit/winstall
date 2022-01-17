@@ -1,5 +1,38 @@
 Import-Module $PSScriptRoot\utils.psm1
 
+$apps = (
+    "Microsoft.VisualStudioCode",
+    "Postman.Postman",
+    "Mozilla.Firefox",
+    "SlackTechnologies.Slack",
+    "Armin2208.WindowsAutoNightMode",
+    "7zip.7zip",
+    "VideoLAN.VLC",
+    "OBSProject.OBSStudio",
+    "Lexikos.AutoHotkey",
+    "Microsoft.PowerToys",
+    "Python.Python.3",
+    "WinDirStat.WinDirStat",
+    "Git.Git",
+    "GitHub.GitHubDesktop",
+    "Microsoft.VisualStudio.2022.Community"
+)
+
+function Test-InstallApps {
+
+    # winget check if it exists and download
+    if (-not (Test-Command 'winget')) {
+        Write-Output "winget cmdlet not found"
+        Return $false
+    }
+
+    # download apps
+
+
+    $apps | ForEach-Object { winget list --id $_ }
+}
+
+
 function Invoke-InstallApps {
 
     # winget check if it exists and download
@@ -9,19 +42,26 @@ function Invoke-InstallApps {
     }
 
     # download apps
-    winget install Microsoft.VisualStudioCode
-    winget install Postman.Postman
-    winget install Mozilla.Firefox
-    winget install SlackTechnologies.Slack
-    winget install Armin2208.WindowsAutoNightMode
-    winget install 7zip.7zip
-    winget install VideoLAN.VLC
-    winget install OBSProject.OBSStudio
-    winget install Lexikos.AutoHotkey
-    winget install Microsoft.PowerToys
-    winget install Python.Python.3
-    winget install WinDirStat.WinDirStat
-    winget install Git.Git
-    winget install GitHub.GitHubDesktop
-    winget install Microsoft.VisualStudio.2022.Community
+    # https://docs.microsoft.com/en-us/windows/package-manager/winget/install
+    $apps | ForEach-Object { winget install --id $_ --exact}
+
+
 }
+
+function Invoke-InstallNewApps {
+
+    # winget check if it exists and download
+    if (-not (Test-Command 'winget')) {
+        Write-Output "winget cmdlet not found"
+        Return
+    }
+
+    # download apps
+    # https://docs.microsoft.com/en-us/windows/package-manager/winget/install
+    $apps | ForEach-Object { winget install --id $_ --exact}
+
+
+}
+
+
+$winApps = winget list

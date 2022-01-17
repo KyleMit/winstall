@@ -114,3 +114,18 @@ The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be use
   -not $true
   !$true
   ```
+
+* [Add Native PowerShell Support](https://github.com/microsoft/winget-cli/issues/221)
+
+  [How to create a list of non upgradable software for winget](https://www.codewrecks.com/post/general/winget-update-selective/)
+
+
+## VS Code
+
+* [How to change indentation in Visual Studio Code?](https://stackoverflow.com/q/34174207/1366033)
+
+  ```json
+  "[typescript]": {
+      "editor.tabSize": 2
+  }
+  ```

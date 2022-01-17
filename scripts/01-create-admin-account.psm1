@@ -1,9 +1,13 @@
 
+function Test-CreateLocalAdmin {
+    Return [bool](Get-LocalUser admin)
+}
+
+
+
 function Invoke-CreateLocalAdmin {
-    if (Get-LocalUser admin) {
-        # admin already exists, we're all set
-        Return
-    }
+    # admin already exists, we're all set
+    if (Test-CreateLocalAdmin) { Return }
 
     Write-Output "Creating admin acct..."
 

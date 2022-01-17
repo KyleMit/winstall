@@ -1,3 +1,10 @@
+$oldName = "Kylem"
+$newName = "kylemit"
+
+function Test-RenameUser {
+    Return [bool](Get-LocalUser $newName)
+}
+
 
 function Invoke-RenameUser {
     if ($env:UserName -ne "admin") {
@@ -9,8 +16,8 @@ function Invoke-RenameUser {
     Write-Output "Renaming kylem..."
 
     # profile names
-    $oldProfilePath = "C:\Users\Kylem"
-    $newProfilePath = "C:\Users\kylemit"
+    $oldProfilePath = "C:\Users\$oldName"
+    $newProfilePath = "C:\Users\$newName"
 
     # rename folder
     Rename-Item -Path $oldProfilePath -NewName $newProfilePath
@@ -23,7 +30,7 @@ function Invoke-RenameUser {
     Set-ItemProperty -Path $userProfileItem.PSPath -Name ProfileImagePath -Value $newProfilePath
 
     # set local username
-    Rename-LocalUser -Name "Kylem" -NewName "kylemit"
+    Rename-LocalUser -Name $oldName -NewName $newName
 
 }
 
