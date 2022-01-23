@@ -1,5 +1,21 @@
 # Powershell
 
+## Tools
+
+* [Visual Studio Code for PowerShell 7 - PowerShell Team](https://devblogs.microsoft.com/powershell/visual-studio-code-for-powershell-7/)
+* [PowerShell - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+
+## Docs
+
+* [Type Accelerators](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators?view=powershell-5.1)
+* [about Wildcards](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_wildcards?view=powershell-7.2)
+* [about Enum](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_enum?view=powershell-7.2)
+* [Everything you wanted to know about the if statement](https://docs.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-if?view=powershell-7.2#-match-regular-expression)
+
+## Articles
+
+* [WMI and CIM accelerators | Richard Siddaway's Blog](https://richardspowershellblog.wordpress.com/2018/05/26/wmi-and-cim-accelerators/)
+
 ## Operators
 
 [about_Operators](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.2)
@@ -145,4 +161,66 @@
   * applies a member access (`?.`) or element access (`?[]) operation to its operand only if that operand evaluates to non-null; otherwise, it returns null
     * ex: `$a = @{ PropName = 100 }; ${a}?.PropName`
 
+## Questions
+
+* Check if Running As Admin
+
+  * [Check if I'm running with administrator privileges?](https://serverfault.com/q/95431/176522)
+  * [Detect if PowerShell is running as administrator](https://superuser.com/q/749243/180163)
+
+
+  ```ps1
+  ([Security.Principal.WindowsPrincipal] `
+    [Security.Principal.WindowsIdentity]::GetCurrent() `
+  ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+  ```
+
+* [Using Namespace in powershell](https://stackoverflow.com/q/1048954/1366033)
+
+  [about Using](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7)
+
+  ```ps1
+  using namespace System.Security.Principal
+  [WindowsIdentity]::GetCurrent();
+  ```
+
+  or
+
+  ```ps1
+  #Requires -RunAsAdministrator
+  ```
+
+
+  * [`WindowsIdentity.GetCurrent`](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsidentity.getcurrent?view=net-6.0)
+  * [`WindowsPrincipal.IsInRole`](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsprincipal.isinrole?view=net-6.0)
+  * [`WindowsBuiltInRole.Administrator`](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsbuiltinrole?view=net-6.0)
+
+
+* [How do I get the current username in Windows PowerShell?](https://stackoverflow.com/q/2085744)
+
+  ```ps1
+  $env:UserName
+  ```
+
+* [How do I negate a condition in PowerShell?](https://stackoverflow.com/q/8095638/1366033)
+
+  ```ps1
+  -not $true
+  !$true
+  ```
+
+* [Check if string contains substring](https://stackoverflow.com/q/18877580/1366033)
+
+  ```ps1
+  "abc" -match "b"
+  "abc" -like "*b*"
+  ```
+
+* Extract Regex Match
+
+
+  $input = "Prefix: {123}"
+  $input | Select-String "{.*}" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Value
+  ($input | Select-String "{.*}").Matches.Value
+  [Regex]::Matches($input, "{.*}" ).Value
 

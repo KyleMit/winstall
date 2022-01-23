@@ -5,4 +5,4 @@ Invoke-CreateLocalAdmin
 Invoke-RenameUser
 Invoke-InstallApps
 Invoke-ConfigureGit
-
+Invoke-ConfigurePowerPlan

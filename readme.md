@@ -10,9 +10,11 @@ Getting a new machine up and running nice and easy like
   * code/dir
 * setup modules
 * dictionary
-* check if admin, else elevate
+* check if admin
+  * if not, elevate
 * if you don't have ps, download via bat or sh
 * download windir if not present
+* spellcheck
 
 * idempotent
   * stop script if sub-error

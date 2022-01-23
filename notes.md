@@ -93,12 +93,6 @@
 The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be used instead.
 
 
-* [How do I get the current username in Windows PowerShell?](https://stackoverflow.com/q/2085744)
-
-  ```ps1
-  $env:UserName
-  ```
-
 * [How to change a Windows username using the command prompt?](https://superuser.com/q/1159929/180163)
 
   ```bash
@@ -108,12 +102,7 @@ The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be use
   * [`Rename-LocalUser`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/rename-localuser?view=powershell-5.1)
 
 
-* [How do I negate a condition in PowerShell?](https://stackoverflow.com/q/8095638/1366033)
 
-  ```ps1
-  -not $true
-  !$true
-  ```
 
 * [Add Native PowerShell Support](https://github.com/microsoft/winget-cli/issues/221)
 
@@ -129,3 +118,34 @@ The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be use
       "editor.tabSize": 2
   }
   ```
+
+## Regex
+
+* [Regular Expression for alphanumeric and underscores](https://stackoverflow.com/q/336210/1366033)
+
+  `\w` is equivalent to `[A-Za-z0-9_]`
+
+* [Regex for Guid](https://stackoverflow.com/questions/11040707/c-sharp-regex-for-guid)
+
+  ```js
+  /[0-9A-F]{8}-?[0-9A-F]{4}-?[0-9A-F]{4}-?[0-9A-F]{4}-?[0-9A-F]{12}/i
+  ```
+
+* [Ternary operator in PowerShell](https://stackoverflow.com/q/31341998/1366033)
+
+  * Powershell 7 allows [ternary operators](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-70?view=powershell-7#ternary-operator):
+
+    ```ps1
+    $message = (Test-Path $path) ? "Path exists" : "Path not found"
+    ```
+
+  * Earlier versions: PowerShell gives back values that haven't been assigned.
+
+    ```ps1
+    $a = if ($condition) { $true } else { $false }
+    ```
+
+  * Further Reading
+    * [PowerShell inline If (IIf)](https://stackoverflow.com/q/25682507/1366033)
+    * [PowerShell syntax for something like :? operator?](https://stackoverflow.com/q/52899849/1366033)
+    * [PSAvoidUsingCmdletAliases fires on ternary operator](https://github.com/PowerShell/PSScriptAnalyzer/issues/1612)
