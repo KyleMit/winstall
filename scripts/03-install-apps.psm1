@@ -1,6 +1,7 @@
 Import-Module $PSScriptRoot\utils.psm1
 
 $apps = (
+    "Google.Chrome",
     "Microsoft.VisualStudioCode",
     "Postman.Postman",
     "Mozilla.Firefox",

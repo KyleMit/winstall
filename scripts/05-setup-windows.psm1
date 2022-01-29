@@ -17,7 +17,6 @@ enum PowerSupply {
 function Get-ActivePowerPlan {
     # get active plan
     $curPlan = Get-CimInstance @powerNamespace -Class Win32_PowerPlan -Filter "IsActive = TRUE"
-
     return $curPlan
 }
 
