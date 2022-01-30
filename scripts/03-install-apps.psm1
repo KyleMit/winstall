@@ -2,6 +2,7 @@ Import-Module $PSScriptRoot\utils.psm1
 
 $apps = (
     "Google.Chrome",
+    "Google.Chrome.Canary",
     "Microsoft.VisualStudioCode",
     "Postman.Postman",
     "Mozilla.Firefox",
@@ -16,7 +17,9 @@ $apps = (
     "WinDirStat.WinDirStat",
     "Git.Git",
     "GitHub.GitHubDesktop",
-    "Microsoft.VisualStudio.2022.Community"
+    "GitHub.cli",
+    "Microsoft.VisualStudio.2022.Community",
+    "Chocolatey.ChocolateyGUI"
 )
 
 function Test-InstallApps {
