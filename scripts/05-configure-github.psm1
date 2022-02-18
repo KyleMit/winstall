@@ -11,12 +11,3 @@ function Invoke-ConfigureGithub {
     gh auth login
     # gh config set -h github.com git_protocol ssh
 }
-
-function Test-ConfigureSSH {
-    return Test-Path $HOME\.ssh\*
-}
-
-function Invoke-ConfigureSSH {
-    # gh ssh-key add
-
-}

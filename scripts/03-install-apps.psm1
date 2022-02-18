@@ -1,25 +1,26 @@
 Import-Module $PSScriptRoot\utils.psm1
 
 $apps = (
-    "Google.Chrome",
-    "Google.Chrome.Canary",
-    "Microsoft.VisualStudioCode",
-    "Postman.Postman",
-    "Mozilla.Firefox",
-    "SlackTechnologies.Slack",
-    "Armin2208.WindowsAutoNightMode",
     "7zip.7zip",
-    "VideoLAN.VLC",
-    "OBSProject.OBSStudio",
+    "Armin2208.WindowsAutoNightMode",
+    "Chocolatey.ChocolateyGUI",
+    "Elgato.ControlCenter",
+    "Git.Git",
+    "GitHub.cli",
+    "GitHub.GitHubDesktop",
+    "Google.Chrome.Canary",
+    "Google.Chrome",
     "Lexikos.AutoHotkey",
     "Microsoft.PowerToys",
-    "Python.Python.3",
-    "WinDirStat.WinDirStat",
-    "Git.Git",
-    "GitHub.GitHubDesktop",
-    "GitHub.cli",
     "Microsoft.VisualStudio.2022.Community",
-    "Chocolatey.ChocolateyGUI"
+    "Microsoft.VisualStudioCode",
+    "Mozilla.Firefox",
+    "OBSProject.OBSStudio",
+    "Postman.Postman",
+    "Python.Python.3",
+    "SlackTechnologies.Slack",
+    "VideoLAN.VLC",
+    "WinDirStat.WinDirStat"
 )
 
 function Test-InstallApps {

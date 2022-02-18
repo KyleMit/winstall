@@ -5,4 +5,6 @@ Invoke-CreateLocalAdmin
 Invoke-RenameUser
 Invoke-InstallApps
 Invoke-ConfigureGit
+Invoke-ConfigureGithub
+Invoke-ConfigureGitRepos
 Invoke-ConfigurePowerPlan

@@ -33,3 +33,6 @@ Getting a new machine up and running nice and easy like
   * three finger tap -> middle click
 
 * todo - prompt for values or set via config?
+
+* VS Code - Powershell Integrated Console
+  * Use PS7
