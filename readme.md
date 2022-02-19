@@ -1,38 +1,34 @@
 # Winstaller
 
-Getting a new machine up and running nice and easy like
+Automating something I do at most once every year
+
+## Goals
+
+* Operations should be idempotent - in that you may run the script as many times as you like in setting up or resetting your machine
+* Errors should be actionable, but resolved programmatically
 
 ## Todo
 
-* only install new apps
 * set chrome as default browser
-* winget upgrade
-* configure git
-* add ssh
-* download all repos
-  * code/dir
-* setup modules
-* spell check dictionary
-* check if admin
-  * if not, elevate
-* if you don't have ps, download via bat or sh
-* download `winget` if not present
-* spellcheck
-* Download neccessary assets (git repo)
-  * Icons
-  * Wallpapers
-* Add requires reboot and instructions on create admin account
-  * out-menu so we don't accidentally run anything
 * dotfiles
-
-* idempotent
+  * spellcheck dictionary
+  * Download necessary assets (git repo)
+    * Icons
+    * Wallpapers
+* winget
+  * only install new apps
+  * winget upgrade
+  * download `winget` if not present
+* bootstrap
+  * if you don't have ps, download via bat or sh
+* scripting
+  * out-menu so we don't accidentally run anything
   * stop script if sub-error
-
+  * use test checks
+  * Add requires reboot and instructions on create admin account
+  * todo - prompt for values or set via config?
 * trackpad
   * invert scrolling
   * three finger tap -> middle click
-
-* todo - prompt for values or set via config?
-
 * VS Code - Powershell Integrated Console
   * Use PS7
