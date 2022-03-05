@@ -3,6 +3,7 @@ Import-Module $PSScriptRoot\utils.psm1
 $apps = (
     "7zip.7zip",
     "Armin2208.WindowsAutoNightMode",
+    "Microsoft.AzureStorageExplorer",
     "Chocolatey.ChocolateyGUI",
     "Elgato.ControlCenter",
     "Git.Git",
@@ -14,13 +15,16 @@ $apps = (
     "Microsoft.PowerToys",
     "Microsoft.VisualStudio.2022.Community",
     "Microsoft.VisualStudioCode",
+    "Microsoft.dotnet",
     "Mozilla.Firefox",
     "OBSProject.OBSStudio",
+    "OpenJS.NodeJS",
     "Postman.Postman",
     "Python.Python.3",
     "SlackTechnologies.Slack",
     "VideoLAN.VLC",
-    "WinDirStat.WinDirStat"
+    "WinDirStat.WinDirStat",
+    "Samsung.DeX"
 )
 
 function Test-InstallApps {
