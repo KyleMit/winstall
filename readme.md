@@ -37,6 +37,11 @@ Automating something I do at most once every year
 * VS Code - Powershell Integrated Console
   * Use PS7
 
+## Prior Art
+
+* [windows-devenv/install.ps1](https://github.com/CodingSpiderFox/windows-devenv/blob/master/install.ps1)
+* [Windows-10-1803-Post-Install-Script/Run_Once.ps1](https://github.com/Gaz2600/Windows-10-1803-Post-Install-Script/blob/master/Run_Once.ps1)
+
 ## Notes
 
 * [Set File Type Association Default Application Command Line Windows 10 UserChoice Hash Internal Method](https://danysys.com/set-file-type-association-default-application-command-line-windows-10-userchoice-hash-internal-method/)
@@ -75,3 +80,11 @@ Get-ItemProperty $regKeyHtml
 <Association Identifier="http" ProgId="ChromeHTML" ApplicationName="Google Chrome" />
 <Association Identifier="https" ProgId="ChromeHTML" ApplicationName="Google Chrome" />
 ```
+
+## VS Code
+
+* [Enable or disable VS Code Integrated Terminal Tabs?](https://stackoverflow.com/q/40406096/1366033)
+
+  ```json
+  "terminal.integrated.tabs.enabled": true
+  ```
