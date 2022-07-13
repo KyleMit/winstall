@@ -88,3 +88,20 @@ Get-ItemProperty $regKeyHtml
   ```json
   "terminal.integrated.tabs.enabled": true
   ```
+
+## Powershell
+
+* [function return vs write-output](https://stackoverflow.com/q/51177881/1366033)
+  *[`Return`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_return?view=powershell-7.2) - returns a value and exits the current scope (function, script, or script block)
+  *[`Write-Output`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-output?view=powershell-7.2) - returns the objects that are submitted as input
+
+
+
+* [Comment Based Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-7.2)
+
+  ```ps1
+  <#
+  .<help keyword>
+  <help content>
+  #>
+  ```

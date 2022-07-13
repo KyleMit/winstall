@@ -1,12 +1,38 @@
+$regKeyFileRoot = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts"
+$regKeyFileItem = "$regKeyFileRoot\{0}\UserChoice"
 
-$regKeyUrl = "HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\{0}\UserChoice"
-$regKeyHttp  = $regKeyUrl -f 'http'
-$regKeyHttps = $regKeyUrl -f 'https'
+$regKeyUrlRoot = "HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations"
+$regKeyUrlItem = "$regKeyUrlRoot\{0}\UserChoice"
 
-$regKeyFile = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\{0}\UserChoice"
-$regKeyHtm  = $regKeyFile -f '.htm'
-$regKeyHtml = $regKeyFile -f '.html'
+$regKeyHtm  = $regKeyFileItem -f '.htm'
+$regKeyHtml = $regKeyFileItem -f '.html'
 
+
+$regKeyHttp  = $regKeyUrlItem -f 'http'
+$regKeyHttps = $regKeyUrlItem -f 'https'
+
+
+
+function Get-FileTypeAssociations {
+    $items = Get-ChildItem "$regKeyFileRoot\*" | ForEach-Object {
+        return Get-FileTypeAssociation $_.PSChildName
+    }
+    return $items
+}
+
+# .EXAMPLE
+#   Get-FileTypeAssociation .html
+function Get-FileTypeAssociation($extension) {
+    $item = Get-ItemProperty ($regKeyFileItem -f $extension) -ErrorAction SilentlyContinue
+    return [PSCustomObject]@{
+        Extension = $extension
+        ProgId = $item.ProgId
+    }
+}
+
+Get-FileTypeAssociations
+
+Get-FileTypeAssociation .html
 
 Set-ItemProperty $regKeyHttp  -name ProgId ChromeHTML
 Set-ItemProperty $regKeyHttps -name ProgId ChromeHTML

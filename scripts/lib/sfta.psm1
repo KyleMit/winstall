@@ -14,37 +14,37 @@
     Copyright  : 2021 Danysys. <danysys.com>
 
 .EXAMPLE
-    Get-FTA
+    Get-FileTypeAssociation
     Show All Application Program Id
 
 .EXAMPLE
-    Get-FTA .pdf
+    Get-FileTypeAssociation .pdf
     Show Default Application Program Id for an Extension
 
 .EXAMPLE
-    Set-FTA AcroExch.Document.DC .pdf
+    Set-FileTypeAssociation AcroExch.Document.DC .pdf
     Set Acrobat Reader DC as Default .pdf reader
 
 .EXAMPLE
-    Set-FTA Applications\SumatraPDF.exe .pdf
+    Set-FileTypeAssociation Applications\SumatraPDF.exe .pdf
     Set Sumatra PDF as Default .pdf reader
 
 .EXAMPLE
-    Set-PTA ChromeHTML http
+    Set-ProtocolTypeAssociation ChromeHTML http
     Set Google Chrome as Default for http Protocol
 
 .EXAMPLE
-    Register-FTA "C:\SumatraPDF.exe" .pdf -Icon "shell32.dll,100"
+    Register-FileTypeAssociation "C:\SumatraPDF.exe" .pdf -Icon "shell32.dll,100"
     Register Application and Set as Default for .pdf reader
 
 .LINK
-    https://github.com/DanysysTeam/PS-SFTA
+    https://github.com/DanysysTeam/PS-SFileTypeAssociation
 
 #>
 
 Add-Type -AssemblyName System.DirectoryServices.AccountManagement
 
-function Get-FTA {
+function Get-FileTypeAssociation {
   [CmdletBinding()]
   param (
     [Parameter(Mandatory = $false)]
@@ -64,7 +64,7 @@ function Get-FTA {
 
     $assocList = Get-ChildItem HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\* |
     ForEach-Object {
-      $progId = (Get-ItemProperty "$($_.PSParentPath)\$($_.PSChildName)\UserChoice" -ErrorAction SilentlyContinue).ProgId
+      $progId = (Get-ItemProperty "$($_.PSPath)\UserChoice" -ErrorAction SilentlyContinue).ProgId
       if ($progId) {
         "$($_.PSChildName), $progId"
       }
@@ -74,7 +74,7 @@ function Get-FTA {
 
 }
 
-function Get-PTA {
+function Get-ProtocolTypeAssociation {
   [CmdletBinding()]
   param (
     [Parameter(Mandatory = $false)]
@@ -102,7 +102,12 @@ function Get-PTA {
   }
 }
 
-function Register-FTA {
+
+
+
+
+
+function Register-FileTypeAssociation {
   [CmdletBinding()]
   param (
     [Parameter( Position = 0, Mandatory = $true)]
@@ -134,7 +139,7 @@ function Register-FTA {
   }
 
   if (!$ProgId) {
-    $ProgId = "SFTA." + [System.IO.Path]::GetFileNameWithoutExtension($ProgramPath).replace(" ", "") + $Extension
+    $ProgId = "SFileTypeAssociation." + [System.IO.Path]::GetFileNameWithoutExtension($ProgramPath).replace(" ", "") + $Extension
   }
 
   $progCommand = """$ProgramPath"" ""%1"""
@@ -152,11 +157,11 @@ function Register-FTA {
     throw "Register ProgId and ProgId Command FAIL"
   }
 
-  Set-FTA -ProgId $ProgId -Extension $Extension -Icon $Icon
+  Set-FileTypeAssociation -ProgId $ProgId -Extension $Extension -Icon $Icon
 }
 
 
-function Remove-FTA {
+function Remove-FileTypeAssociation {
   [CmdletBinding()]
   param (
     [Parameter(Mandatory = $true)]
@@ -169,68 +174,12 @@ function Remove-FTA {
     $Extension
   )
 
-  function local:Remove-UserChoiceKey {
-    param (
-      [Parameter( Position = 0, Mandatory = $True )]
-      [String]
-      $Key
-    )
 
-    $code = @'
-    using System;
-    using System.Runtime.InteropServices;
-    using Microsoft.Win32;
 
-    namespace Registry {
-      public class Utils {
-        [DllImport("advapi32.dll", SetLastError = true)]
-        private static extern int RegOpenKeyEx(UIntPtr hKey, string subKey, int ulOptions, int samDesired, out UIntPtr hkResult);
 
-        [DllImport("advapi32.dll", SetLastError=true, CharSet = CharSet.Unicode)]
-        private static extern uint RegDeleteKey(UIntPtr hKey, string subKey);
-
-        public static void DeleteKey(string key) {
-          UIntPtr hKey = UIntPtr.Zero;
-          RegOpenKeyEx((UIntPtr)0x80000001u, key, 0, 0x20019, out hKey);
-          RegDeleteKey((UIntPtr)0x80000001u, key);
-        }
-      }
-    }
-'@
-
-    try {
-      Add-Type -TypeDefinition $code
-    }
-    catch {}
-
-    try {
-      [Registry.Utils]::DeleteKey($Key)
-    }
-    catch {}
-  }
-
-  function local:Update-Registry {
-    $code = @'
-    [System.Runtime.InteropServices.DllImport("Shell32.dll")]
-    private static extern int SHChangeNotify(int eventId, int flags, IntPtr item1, IntPtr item2);
-    public static void Refresh() {
-        SHChangeNotify(0x8000000, 0, IntPtr.Zero, IntPtr.Zero);
-    }
-'@
-
-    try {
-      Add-Type -MemberDefinition $code -Namespace SHChange -Name Notify
-    }
-    catch {}
-
-    try {
-      [SHChange.Notify]::Refresh()
-    }
-    catch {}
-  }
 
   if (Test-Path -Path $ProgramPath) {
-    $ProgId = "SFTA." + [System.IO.Path]::GetFileNameWithoutExtension($ProgramPath).replace(" ", "") + $Extension
+    $ProgId = "SFileTypeAssociation." + [System.IO.Path]::GetFileNameWithoutExtension($ProgramPath).replace(" ", "") + $Extension
   }
   else {
     $ProgId = $ProgramPath
@@ -265,7 +214,13 @@ function Remove-FTA {
 }
 
 
-function Set-FTA {
+
+
+
+
+
+
+function Set-FileTypeAssociation {
 
   [CmdletBinding()]
   param (
@@ -283,211 +238,27 @@ function Set-FTA {
   )
 
   if (Test-Path -Path $ProgId) {
-    $ProgId = "SFTA." + [System.IO.Path]::GetFileNameWithoutExtension($ProgId).replace(" ", "") + $Extension
+    $ProgId = "SFileTypeAssociation." + [System.IO.Path]::GetFileNameWithoutExtension($ProgId).replace(" ", "") + $Extension
   }
 
   Write-Verbose "ProgId: $ProgId"
   Write-Verbose "Extension/Protocol: $Extension"
 
 
-  function local:Update-RegistryChanges {
-    $code = @'
-    [System.Runtime.InteropServices.DllImport("Shell32.dll")]
-    private static extern int SHChangeNotify(int eventId, int flags, IntPtr item1, IntPtr item2);
-    public static void Refresh() {
-        SHChangeNotify(0x8000000, 0, IntPtr.Zero, IntPtr.Zero);
-    }
-'@
-
-    try {
-      Add-Type -MemberDefinition $code -Namespace SHChange -Name Notify
-    }
-    catch {}
-
-    try {
-      [SHChange.Notify]::Refresh()
-    }
-    catch {}
-  }
 
 
-  function local:Set-Icon {
-    param (
-      [Parameter( Position = 0, Mandatory = $True )]
-      [String]
-      $ProgId,
-
-      [Parameter( Position = 1, Mandatory = $True )]
-      [String]
-      $Icon
-    )
-
-    try {
-      $keyPath = "HKEY_CURRENT_USER\SOFTWARE\Classes\$ProgId\DefaultIcon"
-      [Microsoft.Win32.Registry]::SetValue($keyPath, "", $Icon)
-      Write-Verbose "Write Reg Icon OK"
-      Write-Verbose "Reg Icon: $keyPath"
-    }
-    catch {
-      Write-Verbose "Write Reg Icon Fail"
-    }
-  }
 
 
-  function local:Write-ExtensionKeys {
-    param (
-      [Parameter( Position = 0, Mandatory = $True )]
-      [String]
-      $ProgId,
-
-      [Parameter( Position = 1, Mandatory = $True )]
-      [String]
-      $Extension,
-
-      [Parameter( Position = 2, Mandatory = $True )]
-      [String]
-      $ProgHash
-    )
 
 
-    function local:Remove-UserChoiceKey {
-      param (
-        [Parameter( Position = 0, Mandatory = $True )]
-        [String]
-        $Key
-      )
-
-      $code = @'
-      using System;
-      using System.Runtime.InteropServices;
-      using Microsoft.Win32;
-
-      namespace Registry {
-        public class Utils {
-          [DllImport("advapi32.dll", SetLastError = true)]
-          private static extern int RegOpenKeyEx(UIntPtr hKey, string subKey, int ulOptions, int samDesired, out UIntPtr hkResult);
-
-          [DllImport("advapi32.dll", SetLastError=true, CharSet = CharSet.Unicode)]
-          private static extern uint RegDeleteKey(UIntPtr hKey, string subKey);
-
-          public static void DeleteKey(string key) {
-            UIntPtr hKey = UIntPtr.Zero;
-            RegOpenKeyEx((UIntPtr)0x80000001u, key, 0, 0x20019, out hKey);
-            RegDeleteKey((UIntPtr)0x80000001u, key);
-          }
-        }
-      }
-'@
-
-      try {
-        Add-Type -TypeDefinition $code
-      }
-      catch {}
-
-      try {
-        [Registry.Utils]::DeleteKey($Key)
-      }
-      catch {}
-    }
 
 
-    try {
-      $keyPath = "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\$Extension\UserChoice"
-      Write-Verbose "Remove Extension UserChoice Key If Exist: $keyPath"
-      Remove-UserChoiceKey $keyPath
-    }
-    catch {
-      Write-Verbose "Extension UserChoice Key No Exist: $keyPath"
-    }
 
 
-    try {
-      $keyPath = "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\$Extension\UserChoice"
-      [Microsoft.Win32.Registry]::SetValue($keyPath, "Hash", $ProgHash)
-      [Microsoft.Win32.Registry]::SetValue($keyPath, "ProgId", $ProgId)
-      Write-Verbose "Write Reg Extension UserChoice OK"
-    }
-    catch {
-      throw "Write Reg Extension UserChoice FAIL"
-    }
-  }
 
 
-  function local:Write-ProtocolKeys {
-    param (
-      [Parameter( Position = 0, Mandatory = $True )]
-      [String]
-      $ProgId,
-
-      [Parameter( Position = 1, Mandatory = $True )]
-      [String]
-      $Protocol,
-
-      [Parameter( Position = 2, Mandatory = $True )]
-      [String]
-      $ProgHash
-    )
 
 
-    try {
-      $keyPath = "HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\$Protocol\UserChoice"
-      Write-Verbose "Remove Protocol UserChoice Key If Exist: $keyPath"
-      Remove-Item -Path $keyPath -Recurse -ErrorAction Stop | Out-Null
-
-    }
-    catch {
-      Write-Verbose "Protocol UserChoice Key No Exist: $keyPath"
-    }
-
-
-    try {
-      $keyPath = "HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\$Protocol\UserChoice"
-      [Microsoft.Win32.Registry]::SetValue( $keyPath, "Hash", $ProgHash)
-      [Microsoft.Win32.Registry]::SetValue($keyPath, "ProgId", $ProgId)
-      Write-Verbose "Write Reg Protocol UserChoice OK"
-    }
-    catch {
-      throw "Write Reg Protocol UserChoice FAIL"
-    }
-
-  }
-
-
-  function local:Get-UserExperience {
-    [OutputType([string])]
-
-    $userExperienceSearch = "User Choice set via Windows User Experience"
-    $user32Path = [Environment]::GetFolderPath([Environment+SpecialFolder]::SystemX86) + "\Shell32.dll"
-    $fileStream = [System.IO.File]::Open($user32Path, [System.IO.FileMode]::Open, [System.IO.FileAccess]::Read, [System.IO.FileShare]::ReadWrite)
-    $binaryReader = New-Object System.IO.BinaryReader($fileStream)
-    [Byte[]] $bytesData = $binaryReader.ReadBytes(5mb)
-    $fileStream.Close()
-    $dataString = [Text.Encoding]::Unicode.GetString($bytesData)
-    $position1 = $dataString.IndexOf($userExperienceSearch)
-    $position2 = $dataString.IndexOf("}", $position1)
-
-    Write-Output $dataString.Substring($position1, $position2 - $position1 + 1)
-  }
-
-
-  function local:Get-UserSid {
-    [OutputType([string])]
-    $userSid = ([System.DirectoryServices.AccountManagement.UserPrincipal]::Current).SID.Value.ToLower()
-    Write-Output $userSid
-  }
-
-
-  function local:Get-HexDateTime {
-    [OutputType([string])]
-
-    $now = [DateTime]::Now
-    $dateTime = [DateTime]::New($now.Year, $now.Month, $now.Day, $now.Hour, $now.Minute, 0)
-    $fileTime = $dateTime.ToFileTime()
-    $hi = ($fileTime -shr 32)
-    $low = ($fileTime -band 0xFFFFFFFFL)
-    $dateTimeHex = ($hi.ToString("X8") + $low.ToString("X8")).ToLower()
-    Write-Output $dateTimeHex
-  }
 
   function Get-Hash {
     [CmdletBinding()]
@@ -673,7 +444,7 @@ function Set-FTA {
 
 }
 
-function Set-PTA {
+function Set-ProtocolTypeAssociation {
   [CmdletBinding()]
   param (
     [Parameter(Mandatory = $true)]
@@ -688,5 +459,262 @@ function Set-PTA {
     $Icon
   )
 
-  Set-FTA -ProgId $ProgId -Protocol $Protocol -Icon $Icon
+  Set-FileTypeAssociation -ProgId $ProgId -Protocol $Protocol -Icon $Icon
+}
+
+function Update-Registry {
+  $code = @'
+  [System.Runtime.InteropServices.DllImport("Shell32.dll")]
+  private static extern int SHChangeNotify(int eventId, int flags, IntPtr item1, IntPtr item2);
+  public static void Refresh() {
+      SHChangeNotify(0x8000000, 0, IntPtr.Zero, IntPtr.Zero);
+  }
+'@
+
+  try {
+    Add-Type -MemberDefinition $code -Namespace SHChange -Name Notify
+  }
+  catch {}
+
+  try {
+    [SHChange.Notify]::Refresh()
+  }
+  catch {}
+}
+
+function Remove-UserChoiceKey {
+  param (
+    [Parameter( Position = 0, Mandatory = $True )]
+    [String]
+    $Key
+  )
+
+  $code = @'
+  using System;
+  using System.Runtime.InteropServices;
+  using Microsoft.Win32;
+
+  namespace Registry {
+    public class Utils {
+      [DllImport("advapi32.dll", SetLastError = true)]
+      private static extern int RegOpenKeyEx(UIntPtr hKey, string subKey, int ulOptions, int samDesired, out UIntPtr hkResult);
+
+      [DllImport("advapi32.dll", SetLastError=true, CharSet = CharSet.Unicode)]
+      private static extern uint RegDeleteKey(UIntPtr hKey, string subKey);
+
+      public static void DeleteKey(string key) {
+        UIntPtr hKey = UIntPtr.Zero;
+        RegOpenKeyEx((UIntPtr)0x80000001u, key, 0, 0x20019, out hKey);
+        RegDeleteKey((UIntPtr)0x80000001u, key);
+      }
+    }
+  }
+'@
+
+  try {
+    Add-Type -TypeDefinition $code
+  }
+  catch {}
+
+  try {
+    [Registry.Utils]::DeleteKey($Key)
+  }
+  catch {}
+}
+
+function Update-RegistryChanges {
+  $code = @'
+  [System.Runtime.InteropServices.DllImport("Shell32.dll")]
+  private static extern int SHChangeNotify(int eventId, int flags, IntPtr item1, IntPtr item2);
+  public static void Refresh() {
+      SHChangeNotify(0x8000000, 0, IntPtr.Zero, IntPtr.Zero);
+  }
+'@
+
+  try {
+    Add-Type -MemberDefinition $code -Namespace SHChange -Name Notify
+  }
+  catch {}
+
+  try {
+    [SHChange.Notify]::Refresh()
+  }
+  catch {}
+}
+
+function Set-Icon {
+  param (
+    [Parameter( Position = 0, Mandatory = $True )]
+    [String]
+    $ProgId,
+
+    [Parameter( Position = 1, Mandatory = $True )]
+    [String]
+    $Icon
+  )
+
+  try {
+    $keyPath = "HKEY_CURRENT_USER\SOFTWARE\Classes\$ProgId\DefaultIcon"
+    [Microsoft.Win32.Registry]::SetValue($keyPath, "", $Icon)
+    Write-Verbose "Write Reg Icon OK"
+    Write-Verbose "Reg Icon: $keyPath"
+  }
+  catch {
+    Write-Verbose "Write Reg Icon Fail"
+  }
+}
+
+
+function Write-ExtensionKeys {
+  param (
+    [Parameter( Position = 0, Mandatory = $True )]
+    [String]
+    $ProgId,
+
+    [Parameter( Position = 1, Mandatory = $True )]
+    [String]
+    $Extension,
+
+    [Parameter( Position = 2, Mandatory = $True )]
+    [String]
+    $ProgHash
+  )
+
+
+  function local:Remove-UserChoiceKey {
+    param (
+      [Parameter( Position = 0, Mandatory = $True )]
+      [String]
+      $Key
+    )
+
+    $code = @'
+    using System;
+    using System.Runtime.InteropServices;
+    using Microsoft.Win32;
+
+    namespace Registry {
+      public class Utils {
+        [DllImport("advapi32.dll", SetLastError = true)]
+        private static extern int RegOpenKeyEx(UIntPtr hKey, string subKey, int ulOptions, int samDesired, out UIntPtr hkResult);
+
+        [DllImport("advapi32.dll", SetLastError=true, CharSet = CharSet.Unicode)]
+        private static extern uint RegDeleteKey(UIntPtr hKey, string subKey);
+
+        public static void DeleteKey(string key) {
+          UIntPtr hKey = UIntPtr.Zero;
+          RegOpenKeyEx((UIntPtr)0x80000001u, key, 0, 0x20019, out hKey);
+          RegDeleteKey((UIntPtr)0x80000001u, key);
+        }
+      }
+    }
+'@
+
+    try {
+      Add-Type -TypeDefinition $code
+    }
+    catch {}
+
+    try {
+      [Registry.Utils]::DeleteKey($Key)
+    }
+    catch {}
+  }
+
+
+  try {
+    $keyPath = "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\$Extension\UserChoice"
+    Write-Verbose "Remove Extension UserChoice Key If Exist: $keyPath"
+    Remove-UserChoiceKey $keyPath
+  }
+  catch {
+    Write-Verbose "Extension UserChoice Key No Exist: $keyPath"
+  }
+
+
+  try {
+    $keyPath = "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\$Extension\UserChoice"
+    [Microsoft.Win32.Registry]::SetValue($keyPath, "Hash", $ProgHash)
+    [Microsoft.Win32.Registry]::SetValue($keyPath, "ProgId", $ProgId)
+    Write-Verbose "Write Reg Extension UserChoice OK"
+  }
+  catch {
+    throw "Write Reg Extension UserChoice FAIL"
+  }
+}
+
+function Write-ProtocolKeys {
+  param (
+    [Parameter( Position = 0, Mandatory = $True )]
+    [String]
+    $ProgId,
+
+    [Parameter( Position = 1, Mandatory = $True )]
+    [String]
+    $Protocol,
+
+    [Parameter( Position = 2, Mandatory = $True )]
+    [String]
+    $ProgHash
+  )
+
+
+  try {
+    $keyPath = "HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\$Protocol\UserChoice"
+    Write-Verbose "Remove Protocol UserChoice Key If Exist: $keyPath"
+    Remove-Item -Path $keyPath -Recurse -ErrorAction Stop | Out-Null
+
+  }
+  catch {
+    Write-Verbose "Protocol UserChoice Key No Exist: $keyPath"
+  }
+
+
+  try {
+    $keyPath = "HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\$Protocol\UserChoice"
+    [Microsoft.Win32.Registry]::SetValue( $keyPath, "Hash", $ProgHash)
+    [Microsoft.Win32.Registry]::SetValue($keyPath, "ProgId", $ProgId)
+    Write-Verbose "Write Reg Protocol UserChoice OK"
+  }
+  catch {
+    throw "Write Reg Protocol UserChoice FAIL"
+  }
+
+}
+
+
+function Get-UserExperience {
+  [OutputType([string])]
+
+  $userExperienceSearch = "User Choice set via Windows User Experience"
+  $user32Path = [Environment]::GetFolderPath([Environment+SpecialFolder]::SystemX86) + "\Shell32.dll"
+  $fileStream = [System.IO.File]::Open($user32Path, [System.IO.FileMode]::Open, [System.IO.FileAccess]::Read, [System.IO.FileShare]::ReadWrite)
+  $binaryReader = New-Object System.IO.BinaryReader($fileStream)
+  [Byte[]] $bytesData = $binaryReader.ReadBytes(5mb)
+  $fileStream.Close()
+  $dataString = [Text.Encoding]::Unicode.GetString($bytesData)
+  $position1 = $dataString.IndexOf($userExperienceSearch)
+  $position2 = $dataString.IndexOf("}", $position1)
+
+  Write-Output $dataString.Substring($position1, $position2 - $position1 + 1)
+}
+
+
+
+function Get-UserSid {
+  [OutputType([string])]
+  $userSid = ([System.DirectoryServices.AccountManagement.UserPrincipal]::Current).SID.Value.ToLower()
+  Write-Output $userSid
+}
+
+function Get-HexDateTime {
+  [OutputType([string])]
+
+  $now = [DateTime]::Now
+  $dateTime = [DateTime]::New($now.Year, $now.Month, $now.Day, $now.Hour, $now.Minute, 0)
+  $fileTime = $dateTime.ToFileTime()
+  $hi = ($fileTime -shr 32)
+  $low = ($fileTime -band 0xFFFFFFFFL)
+  $dateTimeHex = ($hi.ToString("X8") + $low.ToString("X8")).ToLower()
+  Write-Output $dateTimeHex
 }

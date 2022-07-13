@@ -1,4 +1,4 @@
-Import-Module $PSScriptRoot\utils.psm1
+Import-Module $PSScriptRoot\utils\utils.psm1
 
 $apps = (
     "7zip.7zip",
