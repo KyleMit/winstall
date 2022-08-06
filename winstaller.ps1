@@ -8,3 +8,4 @@ Invoke-ConfigureGit
 Invoke-ConfigureGithub
 Invoke-ConfigureGitRepos
 Invoke-ConfigurePowerPlan
+Invoke-SetupVsCodeCustomIcons
