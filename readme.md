@@ -9,7 +9,11 @@ Automating something I do at most once every year
 
 ## Todo
 
+* windows explorer
+  * Enable View Hidden files
+  * Disable recent in Quick Access
 * set chrome as default browser
+  * [How to Change the Default Windows 11 Browser](https://www.makeuseof.com/windows-11-change-default-browser/)
 * dotfiles
   * spellcheck dictionary
   * Download necessary assets (git repo)
@@ -38,6 +42,12 @@ Automating something I do at most once every year
   * Use PS7
 
 ## Notes
+
+* [How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/q/30024353/1366033)
+
+  ```bash
+  git config --global core.editor "code --wait"
+  ```
 
 * [Set File Type Association Default Application Command Line Windows 10 UserChoice Hash Internal Method](https://danysys.com/set-file-type-association-default-application-command-line-windows-10-userchoice-hash-internal-method/)
 
