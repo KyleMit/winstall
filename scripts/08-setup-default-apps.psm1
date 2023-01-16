@@ -1,10 +1,10 @@
 
 $regKeyUrl = "HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\{0}\UserChoice"
-$regKeyHttp  = $regKeyUrl -f 'http'
+$regKeyHttp = $regKeyUrl -f 'http'
 $regKeyHttps = $regKeyUrl -f 'https'
 
 $regKeyFile = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\{0}\UserChoice"
-$regKeyHtm  = $regKeyFile -f '.htm'
+$regKeyHtm = $regKeyFile -f '.htm'
 $regKeyHtml = $regKeyFile -f '.html'
 
 
@@ -18,15 +18,16 @@ Get-ItemProperty $regKeyHttps
 Get-ItemProperty $regKeyHtm
 Get-ItemProperty $regKeyHtml
 
-function Test-ConfigurePowerPlan {
-
+function Test-DefaultBrowser {
+    # TODO
+    return $false
 
 }
 
 
-function Invoke-ConfigurePowerPlan {
+function Invoke-DefaultBrowser {
 
-    $tempAssocations ="C:\TempCustomAssociations.xml"
+    $tempAssocations = "C:\TempCustomAssociations.xml"
 
     # export file associations to temp file
     Dism /Online /Export-DefaultAppAssociations:$tempAssocations
@@ -36,11 +37,11 @@ function Invoke-ConfigurePowerPlan {
 
     # replace associations for relvant rows
     $tempXmlDoc.DefaultAssociations.Association |
-        Where-Object { $_.Identifier -in ".htm", ".html", "http", "https" } |
-        ForEach-Object {
-            $_.ProgId = "ChromeHTML"
-            $_.ApplicationName = "Google Chrome"
-        }
+    Where-Object { $_.Identifier -in ".htm", ".html", "http", "https" } |
+    ForEach-Object {
+        $_.ProgId = "ChromeHTML"
+        $_.ApplicationName = "Google Chrome"
+    }
 
     # save updates back to temp file
     $tempXmlDoc.Save($tempAssocations)
@@ -58,11 +59,11 @@ $defaultAssociationsPath = "C:\Windows\System32\OEMDefaultAssociations.xml"
 
 # replace associations for relvant rows
 $defaultAssociationsDoc.DefaultAssociations.Association |
-    Where-Object { $_.Identifier -in ".htm", ".html", "http", "https" } |
-    ForEach-Object {
-        $_.ProgId = "MSEdgeHTM"
-        $_.ApplicationName = "Microsoft Edge"
-    }
+Where-Object { $_.Identifier -in ".htm", ".html", "http", "https" } |
+ForEach-Object {
+    $_.ProgId = "MSEdgeHTM"
+    $_.ApplicationName = "Microsoft Edge"
+}
 
 # save updates back to temp file
 $defaultAssociationsDoc.Save($defaultAssociationsPath)

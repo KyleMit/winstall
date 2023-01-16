@@ -1,9 +1,18 @@
+
+$npmApps = @(
+    "git-dirs",
+    "@kylemit/cli-ls"
+)
+
 function Test-ConfigureDefaultApps {
-    # todo
-    return $true
+    $globalApps = npm list --global --depth=0 
+    $globalAppsStr = $globalApps -Join ""
+    $missingApps = $npmApps | Where-Object { !($globalAppsStr | Test-ContainsString $_ ) }
+    $missingApps | ForEach-Object { Write-Output "Missing $_" }
+    return $missingApps.Count -eq 0
 }
 
 
 function Invoke-ConfigureNpm {
-    npm install jshint -g
+    $npmApps | ForEach-Object { npm install $_ -g }   
 }

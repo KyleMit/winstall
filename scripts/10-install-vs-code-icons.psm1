@@ -1,13 +1,22 @@
 $customIconFolder = "$env:AppData\Code\User\vsicons-custom-icons"
 
+$icons = @(
+    "file_type_eleventy.svg",
+    "file_type_light_eleventy.svg"
+)
+
 function Test-SetupVsCodeCustomIcons {
-    # check if we have any repos
-    Test-Path $customIconFolder\*
+    $missingIcons = $icons | Where-Object {
+        -not (Test-Path (Join-Path $customIconFolder $_))
+    }
+    $missingIcons | ForEach-Object { Write-Output "Missing $_" }
+    return $missingIcons.Count -eq 0
 }
 
 
 function Invoke-SetupVsCodeCustomIcons {
     New-Item -ItemType Directory -Force -Path $customIconFolder
-    Copy-Item "./assets/file_type_eleventy.svg" -Destination $customIconFolder
-    Copy-Item "./assets/file_type_light_eleventy.svg" -Destination $customIconFolder
+    $icons | ForEach-Object {
+        Copy-Item "./assets/$_" -Destination $customIconFolder
+    }
 }
