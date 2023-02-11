@@ -27,7 +27,9 @@ $apps = (
     "WinDirStat.WinDirStat",
     "Samsung.DeX",
     "Facebook.Messenger",
-    "JanDeDobbeleer.OhMyPosh"
+    "JanDeDobbeleer.OhMyPosh",
+    "Adobe.Acrobat.Reader.64-bit",
+    "AgileBits.1Password"
 )
 
 function Test-InstallApps {
