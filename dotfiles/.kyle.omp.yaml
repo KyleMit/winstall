@@ -1,0 +1,64 @@
+"$schema": https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+console_title_template: "{{if .Root}}(Admin) {{end}}{{.Folder}}"
+version: 2
+final_space: true
+blocks:
+- type: prompt
+  alignment: left
+  segments:
+  - type: text
+    foreground: "#f48225"
+    style: plain
+    template: "\uf16c "
+
+  - type: session
+    foreground: "#BF616A"
+    style: plain
+    template: "{{ .UserName }} "
+
+  - type: path
+    foreground: "#81A1C1"
+    properties:
+      folder_separator_icon: /
+      style: full
+    style: plain
+    template: "{{ .Path }} "
+
+  - type: git
+    foreground: "#6C6C6C"
+    properties:
+      branch_ahead_icon: "<#88C0D0>\u21e1</>"
+      branch_behind_icon: "<#88C0D0>\u21e3</>"
+      branch_identical_icon: " "
+      fetch_status: true
+      fetch_upstream_icon: true
+
+    style: plain
+    template: >-
+      {{- .HEAD }}
+      {{- .BranchStatus }}
+      {{- if .Working.Changed }}<#FFAFD7> *</>{{ end }}
+
+  - type: executiontime
+    foreground: "#A3BE8C"
+    properties:
+      style: round
+      threshold: 1500
+    style: plain
+    template: " \ufa1a {{ .FormattedMs }} "
+
+
+- type: prompt
+  alignment: left
+  newline: true
+  segments:
+  - type: root
+    foreground: "#ffeb95"
+    style: plain
+    template: "\uF0E7"
+
+  - type: text
+    foreground: "#B48EAD"
+    style: plain
+    template: "{{ if eq \"bash\" .Shell }}${{ else }}\u276F{{ end }}"
+

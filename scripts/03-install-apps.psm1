@@ -1,5 +1,6 @@
 Import-Module $PSScriptRoot\utils.psm1
 
+# todo - split into utlities vs apps
 $apps = (
     "7zip.7zip",
     "Armin2208.WindowsAutoNightMode",
@@ -25,7 +26,11 @@ $apps = (
     "SlackTechnologies.Slack",
     "VideoLAN.VLC",
     "WinDirStat.WinDirStat",
-    "Samsung.DeX"
+    "Samsung.DeX",
+    "Facebook.Messenger",
+    "JanDeDobbeleer.OhMyPosh",
+    "Adobe.Acrobat.Reader.64-bit",
+    "AgileBits.1Password"
 )
 
 function Test-InstallApps {
@@ -36,10 +41,8 @@ function Test-InstallApps {
         Return $false
     }
 
-    # download apps
-
-
-    $apps | ForEach-Object { winget list --id $_ }
+    # todo - check if listed apps are installed
+    # $apps | ForEach-Object { winget list --id $_ }
 }
 
 
@@ -73,5 +76,3 @@ function Invoke-InstallNewApps {
 
 }
 
-
-$winApps = winget list

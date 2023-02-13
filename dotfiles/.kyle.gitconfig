@@ -1,0 +1,43 @@
+[core]
+	editor = code --wait
+
+[push]
+	autoSetupRemote = true
+
+[init]
+	defaultBranch = main
+
+[alias]
+	alias = --list-cmds=alias
+	nudge = !git commit --allow-empty -m 'trigger build' && git push
+	nuke = !git reset --hard HEAD && git clean -xfd
+	undo = reset --soft HEAD~1
+	co = checkout
+	prev = checkout HEAD~1
+	patch = !git add . && git commit --amend --no-edit
+	recent = log --oneline -n 10
+	cleanup = "!f() { \
+		defaultBranch=$(git rev-parse --abbrev-ref origin/HEAD | sed 's/origin\\///'); \
+		echo git checkout $defaultBranch; \
+		git checkout $defaultBranch &&  \
+		git branch | grep -v \\* | xargs git branch -D; \
+	}; \
+	f; \
+	unset f"
+	refresh = "!f() { \
+		defaultBranch=$(git rev-parse --abbrev-ref origin/HEAD | sed 's/origin\\///'); \
+		echo git checkout $defaultBranch; \
+		git checkout $defaultBranch &&  \
+		echo git fetch && \
+		git fetch && \
+		echo git pull && \
+		git pull && \
+		echo git checkout - && \
+		git checkout - && \
+		echo git merge $defaultBranch && \
+		git merge $defaultBranch && \
+		echo git push && \
+		git push; \
+	}; \
+	f; \
+	unset f"

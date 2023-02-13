@@ -9,16 +9,20 @@ Automating something I do at most once every year
 
 ## Todo
 
+* dotfiles
+  * hard link
+  * ask force overwrite?
+  * split git file
+  * split stack vs core profile
+  * spellcheck dictionary
+  * Download necessary assets (git repo)
+    * Icons
+    * Wallpapers
 * windows explorer
   * Enable View Hidden files
   * Disable recent in Quick Access
 * set chrome as default browser
   * [How to Change the Default Windows 11 Browser](https://www.makeuseof.com/windows-11-change-default-browser/)
-* dotfiles
-  * spellcheck dictionary
-  * Download necessary assets (git repo)
-    * Icons
-    * Wallpapers
 * winget
   * only install new apps
   * winget upgrade
@@ -26,7 +30,8 @@ Automating something I do at most once every year
 * bootstrap
   * if you don't have ps, download via bat or sh
 * windows
-  * thumbnail size
+  * increase thumbnail size
+  * taskbar tweaker
 * apps
   * [nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
 * scripting
@@ -40,6 +45,8 @@ Automating something I do at most once every year
   * three finger tap -> middle click
 * VS Code - Powershell Integrated Console
   * Use PS7
+* Document dependendencies (i.e. Font relies on Scoop)
+
 
 ## Notes
 
@@ -47,6 +54,12 @@ Automating something I do at most once every year
 
   ```bash
   git config --global core.editor "code --wait"
+  ```
+
+* Add to profile
+
+  ```ps1
+  "`nNew-Alias which get-command" | add-content $profile
   ```
 
 * [Set File Type Association Default Application Command Line Windows 10 UserChoice Hash Internal Method](https://danysys.com/set-file-type-association-default-application-command-line-windows-10-userchoice-hash-internal-method/)
