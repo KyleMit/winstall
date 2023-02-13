@@ -10,4 +10,6 @@ function Invoke-SetupVsCodeCustomIcons {
     New-Item -ItemType Directory -Force -Path $customIconFolder
     Copy-Item "./assets/file_type_eleventy.svg" -Destination $customIconFolder
     Copy-Item "./assets/file_type_light_eleventy.svg" -Destination $customIconFolder
+
+    # VS Code - manually apply icon customizations
 }

@@ -21,6 +21,7 @@ $apps = (
     "OpenJS.NodeJS",
     "Postman.Postman",
     "Python.Python.3",
+    "RProject.R",
     "SlackTechnologies.Slack",
     "VideoLAN.VLC",
     "WinDirStat.WinDirStat",
@@ -52,7 +53,7 @@ function Invoke-InstallApps {
 
     # download apps
     # https://docs.microsoft.com/en-us/windows/package-manager/winget/install
-    $apps | ForEach-Object { winget install --id $_ --exact}
+    $apps | ForEach-Object { winget install --id $_ --exact }
 
 
 }
@@ -67,7 +68,7 @@ function Invoke-InstallNewApps {
 
     # download apps
     # https://docs.microsoft.com/en-us/windows/package-manager/winget/install
-    $apps | ForEach-Object { winget install --id $_ --exact}
+    $apps | ForEach-Object { winget install --id $_ --exact }
 
 
 }
