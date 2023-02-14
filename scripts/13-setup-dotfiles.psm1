@@ -1,11 +1,12 @@
 Import-Module $PSScriptRoot\utils.psm1
 
 $files = @(
-    @{ file = ".kyle.bashrc"; dest = "$env:USERPROFILE\.kyle.bashrc" }
-    @{ file = ".kyle.dict.txt"; dest = "$env:UserProfile\.kyle.dict.txt" }
-    @{ file = ".kyle.gitconfig"; dest = "$env:USERPROFILE\.kyle.gitconfig" }
-    @{ file = ".kyle.profile.ps1"; dest = "$env:USERPROFILE\.kyle.profile.ps1" }
-    @{ file = ".kyle.omp.yaml"; dest = "$env:USERPROFILE\.kyle.omp.yaml" }
+    @{ file = ".kyle.bashrc"; dest = "$env:USERPROFILE\.kyle.bashrc" },
+    @{ file = ".kyle.dict.txt"; dest = "$env:UserProfile\.kyle.dict.txt" },
+    @{ file = ".kyle.gitconfig"; dest = "$env:USERPROFILE\.kyle.gitconfig" },
+    @{ file = ".kyle.profile.ps1"; dest = "$env:USERPROFILE\.kyle.profile.ps1" },
+    @{ file = ".kyle.stack.profile.ps1"; dest = "$env:USERPROFILE\.kyle.stack.profile.ps1" },
+    @{ file = ".kyle.omp.yaml"; dest = "$env:USERPROFILE\.kyle.omp.yaml" },
     @{ file = "AutoHotkey.ahk"; dest = "$env:AppData\Microsoft\Windows\Start Menu\Programs\Startup\AutoHotkey.ahk" }
 )
 
@@ -21,6 +22,17 @@ $imports = @(
     @{ 
         profile = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1"; 
         import = ". $env:USERPROFILE/.kyle.profile.ps1" 
+    }
+)
+
+$optionalImports = @(
+    @{ 
+        profile = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"; 
+        import = ". $env:USERPROFILE/.kyle.stack.profile.ps1" 
+    },
+    @{ 
+        profile = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1"; 
+        import = ". $env:USERPROFILE/.kyle.stack.profile.ps1" 
     }
 )
 
@@ -58,10 +70,10 @@ function Invoke-SetupDotfiles {
     
     # add import statements
     $imports | ForEach-Object {
-        $profile = $_.profile
-        $import = $_.import
-        if (!(Select-String -Path "$profile" -Pattern $import -SimpleMatch)) {
-            Add-Content -Path $profile -Value "`n$import" 
+        $profilePath = $_.profile
+        $importStatement = $_.import
+        if (!(Select-String -Path "$profilePath" -Pattern $importStatement -SimpleMatch)) {
+            Add-Content -Path $profile -Value "`n$importStatement" 
         }
     }
 

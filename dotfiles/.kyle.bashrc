@@ -36,5 +36,6 @@ HISTFILESIZE=20000
 
 function winget { cmd.exe /c "winget $1 $2 $3";}
 function mklink { cmd.exe /c "mklink $1 $2 $3";}
+# function python { cmd.exe /c "python $1 $2 $3";}
 
 eval "$(oh-my-posh init bash --config ~/.kyle.omp.yaml)"
