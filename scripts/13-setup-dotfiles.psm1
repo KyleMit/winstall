@@ -19,6 +19,10 @@ $imports = @(
         profile = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"; 
         import = ". $env:USERPROFILE/.kyle.profile.ps1" 
     },
+        @{ 
+        profile = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"; 
+        import = ". $env:USERPROFILE/.kyle.profile.ps1" 
+    },
     @{ 
         profile = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1"; 
         import = ". $env:USERPROFILE/.kyle.profile.ps1" 
