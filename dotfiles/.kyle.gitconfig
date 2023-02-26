@@ -8,14 +8,27 @@
 	defaultBranch = main
 
 [alias]
+	# show all aliases
 	alias = --list-cmds=alias
+	# send empty commit to re-trigger build server
 	nudge = !git commit --allow-empty -m 'trigger build' && git push
+	# remove all local changes / files
 	nuke = !git reset --hard HEAD && git clean -xfd
+	# rollback the most recent commit and plaec in staging
 	undo = reset --soft HEAD~1
+	# checkout
 	co = checkout
+	# checkout previous commit
 	prev = checkout HEAD~1
+	# add local changes to previous commit
 	patch = !git add . && git commit --amend --no-edit
+	# show logs of last 10 commits
 	recent = log --oneline -n 10
+	# amend last commit
+	amend = commit --amend
+	# force push
+	fp = push --force-with-lease
+	# remove all local branches except default
 	cleanup = "!f() { \
 		defaultBranch=$(git rev-parse --abbrev-ref origin/HEAD | sed 's/origin\\///'); \
 		echo git checkout $defaultBranch; \
@@ -24,6 +37,7 @@
 	}; \
 	f; \
 	unset f"
+	# merge laster version of master into current branch
 	refresh = "!f() { \
 		defaultBranch=$(git rev-parse --abbrev-ref origin/HEAD | sed 's/origin\\///'); \
 		echo git checkout $defaultBranch; \
