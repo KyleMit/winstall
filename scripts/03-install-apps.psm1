@@ -22,6 +22,7 @@ $apps = (
     "OpenJS.NodeJS",
     "Postman.Postman",
     "Python.Python.3",
+    "RProject.R",
     "SlackTechnologies.Slack",
     "VideoLAN.VLC",
     "WinDirStat.WinDirStat",

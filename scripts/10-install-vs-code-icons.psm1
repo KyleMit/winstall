@@ -19,4 +19,6 @@ function Invoke-SetupVsCodeCustomIcons {
     $icons | ForEach-Object {
         Copy-Item "./assets/$_" -Destination $customIconFolder
     }
+
+    Write-Output "Open VS Code and Run 'Apply Icon Customizations'"
 }
