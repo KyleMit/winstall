@@ -25,6 +25,14 @@ function Start-IISAppPools {
         Import-Module IISAdministration
     }
 
-    # TODO - need to elevate to do this...?
     Get-IISAppPool | Where-Object { $_.State -eq 'Stopped' } | ForEach-Object { $_.Start() }
+}
+
+function Start-IISSites {
+    # TODO elevate permissions
+    if (!(Get-Module | Where-Object { $_.Name -eq 'IISAdministration' })) {
+        Import-Module IISAdministration
+    }
+
+    Get-IISSite | Where-Object { $_.State -eq 'Stopped' } | ForEach-Object { $_.Start() }
 }

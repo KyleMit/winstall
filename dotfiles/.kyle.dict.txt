@@ -243,6 +243,7 @@ appinsights
 appinsightsreleaseannotations
 appium
 applescript
+APPLICATIONHOST
 Applitool
 Applitools
 appname
@@ -303,6 +304,7 @@ Ashtyn
 ashx
 askdifferent
 askers
+Askers
 askpageemailsubscription
 askpatents
 askubuntu
@@ -1365,6 +1367,7 @@ Dumke
 duplicative
 durandal
 Durrel
+Dursun
 Dusan
 duti
 DVCS
@@ -1558,6 +1561,7 @@ Falk
 falses
 Falsey
 fancybox
+FANMAG
 Fannypack
 fant
 Fantastico
@@ -1748,6 +1752,7 @@ Gagne's
 Gainsight
 Galactica
 Galerie
+Gallatin
 gamekit
 Gamepad
 gameplay
@@ -1813,6 +1818,7 @@ ghostbusters
 ghostdriver
 Ghostery
 Ghostie
+giamir
 Giannis
 Giasson
 Gidda
@@ -1831,6 +1837,7 @@ gitclone
 Gitflow
 githooks
 GitHub
+githubnext
 GITHUBRO
 Gitlab
 gitleaks
@@ -1894,6 +1901,7 @@ greasemonkey
 grecaptcha
 greenkeeper
 greenshift
+Greenwashing
 gregjoeval
 Gregorek
 gress
@@ -1996,6 +2004,7 @@ Hatzenbuehler
 hault
 Haverbeke
 hawkgs
+Haxball
 HAXM
 Haydenberry
 Hayutin
@@ -2134,6 +2143,7 @@ IAAP
 iadd
 Iannone
 iban
+Ibrahim
 icmp
 ICWA
 idcard
@@ -2315,6 +2325,7 @@ Jemisin
 Jenall
 Jenga
 jenlooper
+Jeoparty
 jeremyfa
 Jesper
 Jetbrains
@@ -2579,6 +2590,7 @@ LBYL
 LCID
 LCMHC
 lcov
+LCTL
 LDAP
 ldjam
 Leaderboard
@@ -2732,6 +2744,7 @@ LQIP
 lramage
 lrdb
 lsep
+LSFT
 lshift
 lstat
 LTCF
@@ -2763,6 +2776,7 @@ Maccarone
 Maciej
 Macropad
 Madhu
+Madlib
 Magento
 Magit
 Mahbubul
@@ -2889,6 +2903,7 @@ metamethod
 metamethods
 Metas
 metase
+metaso
 metatable
 metatables
 Metcalf
@@ -2982,6 +2997,7 @@ Modulification
 modulified
 Modulify
 Modulifying
+Modulith
 moggies
 Mohgwyn
 Moine
@@ -3508,6 +3524,7 @@ pearcec
 peasy
 Pecor
 peggyrayzis
+Peisch
 Pelha
 Peloton
 Penina
@@ -3994,6 +4011,7 @@ RESTAPI
 RESTAPIV
 Restorehealth
 restreport
+resultbox
 retag
 Retheming
 returnname
@@ -4209,6 +4227,7 @@ SDKs
 SDLC
 Seabiscuit
 searchallowed
+searchbox
 Searls
 sebmarkbage
 Secor
@@ -4477,11 +4496,13 @@ SSAS
 SSDT
 SSIS
 SSMS
+SSOT
 Ssrc
 SSRI
 SSRS
 SSSZ
 sstatic
+Stacia
 stackable
 stackapps
 stackauth
@@ -4645,6 +4666,7 @@ symlinks
 Syncfusion
 synchronistic
 syncpack
+Syncytial
 Syndney
 syntaxhighlight
 syntaxhighlighter
@@ -4759,6 +4781,7 @@ thead
 Thebaud
 thefuck
 thekaeway
+thekey
 themeable
 Themeing
 theming
@@ -4778,6 +4801,7 @@ thompsonco
 thon
 threadable
 Threadable
+Threadline
 threefjefff
 Thrombocytopenia
 Thunar
@@ -4861,6 +4885,7 @@ Trafton
 Trah
 Trailhead
 Traliant
+Tranese
 Transactable
 transactionid
 transformative
@@ -5058,6 +5083,7 @@ Unsets
 Unshift
 unshown
 unsized
+unsplit
 Unstage
 unstaged
 unstyled
@@ -5485,6 +5511,7 @@ YYYYMMDD
 yzhang
 zachleat
 Zack
+Zade
 Zaefferer
 Zak's
 zalmoxisus
@@ -5516,3 +5543,4 @@ zricethezav
 Zuber
 Zuora
 zzzprojects
+русском
