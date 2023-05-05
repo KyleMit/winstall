@@ -60,6 +60,7 @@ Adichie
 Aditya
 Adly
 adlythebaud
+adnammit
 adops
 adoptacustomer
 adptotalsource
@@ -74,6 +75,8 @@ affordances
 Afib
 AFIX
 Aform
+afterbegin
+afterend
 Agarwal
 Agarwal's
 agarzola
@@ -127,6 +130,7 @@ Aliza
 Alize
 allejo
 Allene
+allitems
 Allostatic
 allowfullscreen
 allowfullscren
@@ -379,6 +383,7 @@ autopay
 autopep8
 autoplay
 autopublish
+autopublished
 autorun
 Autosave
 autoshow
@@ -388,6 +393,7 @@ Avanti
 avenir
 Aviles
 AWARDINFO
+awarren
 awebdeveloper
 awscli
 awscloudformation
@@ -460,12 +466,14 @@ Beaudette
 Beaulah
 Beeram
 beflexibleandinclusive
+beforebegin
 beforeend
 beforeinstallprompt
 Behance
 behaviour
 behaviourally
 behaviours
+Beinat
 Bemail
 benawad
 benchtest
@@ -482,7 +490,9 @@ Berniece
 Bernier
 Bernita
 bertobox
+bestie
 Beswick
+betalgo
 betransparent
 Bettina
 BEVS
@@ -497,6 +507,7 @@ Biathletes
 bibtex
 bidability
 bierner
+Bigram
 Bigtable
 Bilal
 bindable
@@ -506,6 +517,7 @@ bindablerequestid
 bindingsource
 Bing
 BIPOC
+birdbuddy
 Birgitta
 Birman
 Birthdate
@@ -517,6 +529,7 @@ Bitbucket
 Bitlocker
 bitmask
 Bitrise
+Bitstream
 bjornbytes
 bkelly
 blackbox
@@ -724,6 +737,7 @@ chartjs
 Chartreux
 chasetype
 chatbots
+chatgpt
 chatrooms
 Chatterfall
 Chaudary
@@ -868,6 +882,7 @@ colorpack
 Colorpoint
 Colorpoints
 Colourpoint
+colspan
 colspans
 Colston
 columnheader
@@ -1073,6 +1088,7 @@ Databricks
 datacenter
 datacenters
 dataclass
+datafeeds
 datafix
 Datagram
 datagrid
@@ -1092,6 +1108,7 @@ DATEPART
 datepicker
 datetime
 DATETIMEOFFSET
+DATETRUNC
 davidkpiano
 davidtheclark
 davinci
@@ -1300,6 +1317,7 @@ Dodds
 Doerr
 Doesnt
 dofile
+dogfooding
 Doguhan
 Dohm
 doin
@@ -1321,6 +1339,7 @@ dotnetcore
 dotnettools
 Doubleclick
 doublespace
+Doudou
 Dougherty
 Downasuar
 downlevel
@@ -1408,6 +1427,7 @@ Edmonds
 Edmondson
 edness
 EDRS
+edtech
 eeeps
 eemeli
 eero
@@ -1417,6 +1437,7 @@ Eggy
 Egwuenu
 EHARS
 ehem
+Ehrhorn
 Eich
 Elad
 elad_bezalel
@@ -1511,6 +1532,8 @@ etlua
 ETOR
 Euromonitor
 euronext
+euthymia
+euthymic
 eval
 Evals
 evanw
@@ -1556,6 +1579,7 @@ facetime
 Factorio
 factorypath
 Fagnani
+faiss
 Falck
 Falk
 falses
@@ -1613,10 +1637,12 @@ FHIR
 fiagency
 Fialkowski
 Fibbage
+fielddata
 fieldset
 fieldtrials
 FIFA
 Figma
+filemode
 FILENO
 Fileshare
 filesize
@@ -1788,6 +1814,8 @@ Geeksfor
 Geeta
 Geico
 Gemba
+Genc
+Genç
 Genda
 genderqueer
 generalmanager
@@ -1888,6 +1916,7 @@ gpedit
 Gradapalooza
 Grafana
 Gramm
+grammarly
 grandheroes
 Graphi
 graphiql
@@ -1926,6 +1955,7 @@ gsudo
 gtag
 gtspace
 Guake
+Guanfacine
 Guardium
 guids
 Guindon
@@ -2022,6 +2052,7 @@ heapify
 heapq
 Heapsort
 Heartbleed
+Heatley
 hecticness
 Heffernon
 Hefferon
@@ -2160,6 +2191,7 @@ iframes
 IFTTT
 ifwinactive
 IgniteUI
+ignorecase
 IIFE
 iisb
 iisexpress
@@ -2253,6 +2285,7 @@ internalids
 interruptible
 interwebs
 introspectable
+Intuniv
 inval
 Invitae
 invocable
@@ -2627,6 +2660,7 @@ letteers
 Leung
 Levinstein
 lewsid
+Lexapro
 Lexikos
 lextudio
 LFTM
@@ -2712,6 +2746,7 @@ localstorage
 Loebs
 Lofgren
 Loftus
+logallrefupdates
 loggedin
 LoggedInUserService
 Loggly
@@ -2757,6 +2792,8 @@ luaparse
 luarocks
 Lucene
 Luciana
+Lucida
+Lucidspark
 Ludum
 luin
 lukas
@@ -2871,6 +2908,7 @@ medipass
 Mediumitalic
 meds
 Medtech
+Megatron
 Megha
 Meghana
 Megida
@@ -2879,11 +2917,13 @@ megsachdev
 mehedi
 mehedih
 Meidan
+Meiss
 memeified
 Memeness
 Memorystore
 Mendy
 Meningococcal
+Menlo
 mentee
 mentees
 mentionnames
@@ -2966,6 +3006,7 @@ Misakai
 Mish
 Mishra
 Mitchelmore
+Mithila
 Mitigations
 MITM
 mitofsky
@@ -3032,6 +3073,7 @@ movieplayer
 mozfullscreenchange
 mozfullscreenerror
 mpkg
+mpnet
 mrdoob
 MRLC
 mrmlnc
@@ -3083,6 +3125,7 @@ MVPs
 MVVM
 myapp
 myapprc
+mybirdbuddy
 mycodeschool
 Mykhailenko
 mylogins
@@ -3134,6 +3177,7 @@ NEDDS
 NEDS
 NEDSS
 nedssdomain
+Needz
 Neehar
 Neehar’s
 neeharv
@@ -3211,6 +3255,7 @@ nocheck
 nock
 nocookie
 nocount
+nodeattrs
 nodeca
 nodegit
 nodeist
@@ -3277,6 +3322,7 @@ nowrap
 nparashuram
 npkill
 npm's
+npmignore
 npmjs
 npmrc
 npoi
@@ -3463,6 +3509,7 @@ paduy
 pagedown
 pagehide
 pageload
+pagesize
 pagesizer
 pageview
 pageviews
@@ -3473,6 +3520,7 @@ Palos
 Palpatining
 PAMSTACK
 Pandoc
+Pansexual
 Pantera
 Paolini
 paolosalvatori
@@ -3564,6 +3612,7 @@ Phacks
 phantomcosmonaut
 phar
 phenixcoder
+Phind
 PHINMS
 phonenumber
 Photoshop
@@ -3584,6 +3633,7 @@ pinnable
 pinst
 Pinterest
 Piplup
+Pitty
 Pixeljam
 Pixi
 pixrem
@@ -3973,6 +4023,7 @@ repoint
 repolist
 reportingtype
 repos
+repositoryformatversion
 repost
 repr
 reprex
@@ -4017,6 +4068,7 @@ Retheming
 returnname
 RETURNTRANSFER
 returnurl
+Reupholstery
 reupload
 reuptake
 Revell
@@ -4041,6 +4093,7 @@ riskeutility
 Riso
 Rizzo
 rjpeart
+RLHF
 rmdir
 roact
 Roact's
@@ -4094,6 +4147,7 @@ rowheader
 rownum
 rowsets
 rowspans
+rowversion
 royboy
 Royer
 rpmalloc
@@ -4160,6 +4214,7 @@ Samo
 samplerate
 SAMS
 samsclub
+samsmithnz
 sandboxed
 sandboxing
 sandermvanvliet
@@ -4184,6 +4239,7 @@ SCANNOW
 scaredy
 Schels
 schemastore
+Schepers
 Schermerhorn
 Schimoler
 Schleifer
@@ -4333,6 +4389,7 @@ Shorthairs
 shortlink
 Shortlinks
 shortlog
+Shortridge
 shortstat
 Shotwell
 Shoulda
@@ -4395,6 +4452,7 @@ Slidio
 Slido
 Sligh
 Slover
+Sludgehammer
 slugify
 Slytherin
 SMALLINT
@@ -4465,6 +4523,7 @@ speedrunners
 spherion
 Sphynx
 SPII
+Spivack
 Spivey
 Splatoon
 Splitbee
@@ -4540,6 +4599,7 @@ stefansundin
 Steffi
 Steinfeld
 Stelara
+Stellaluna
 Steph
 stephenfluin
 steppin
@@ -4755,6 +4815,7 @@ temitopeadesoji
 tempdiv
 templating
 tempspace
+Tenex
 Tenzin
 terkelg
 testalso
@@ -4778,6 +4839,7 @@ texted
 Textfield
 Thayer
 thead
+Theanine
 Thebaud
 thefuck
 thekaeway
@@ -4844,6 +4906,7 @@ todoistjs
 todomd
 todos
 Toggl
+toggler
 toid
 toint
 tolocalestring
@@ -4936,6 +4999,7 @@ TTFB
 Tuco
 Tully
 Tunbridge
+Turbolinks
 Turbopack
 Turborepo
 Turcic
@@ -5241,6 +5305,7 @@ viewports
 Vikash
 ville
 Villemarie
+vimwiki
 Vinh
 Vinko
 vinsolutions
@@ -5391,6 +5456,9 @@ wicg
 Wickr
 Wierman
 WIFI
+WIIFM
+WIIFO
+WIIFU
 Wildermuth
 wildfly
 Williston
@@ -5541,6 +5609,8 @@ Zorin
 zpbappi
 zricethezav
 Zuber
+Zulkuf
+Zülküf
 Zuora
 zzzprojects
 русском
