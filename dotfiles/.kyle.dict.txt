@@ -2843,6 +2843,7 @@ manpages
 Mansour
 mansplaining
 Manu
+Maplewood
 Marashaj
 Marchán
 Marchand
@@ -5464,6 +5465,7 @@ wildfly
 Williston
 Wimi
 Winarsky
+Windhawk
 WINDIR
 windll
 Windos
