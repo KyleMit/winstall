@@ -185,6 +185,7 @@ Analytics
 anand
 Anandappa
 Anaplasmosis
+Andi
 Andor
 Andreane
 Andreanne
@@ -469,6 +470,7 @@ beflexibleandinclusive
 beforebegin
 beforeend
 beforeinstallprompt
+beforeunload
 Behance
 behaviour
 behaviourally
@@ -507,6 +509,7 @@ Biathletes
 bibtex
 bidability
 bierner
+bigcode
 Bigram
 Bigtable
 Bilal
@@ -583,11 +586,13 @@ BOTW
 Boudrias
 Boutar
 Bowens
+Boyden
 Bpassword
 Brabender
 bradwellsb
 Braintree
 bramstein
+Branchable
 Brandenberger
 Brandyn
 Brattleboro
@@ -694,6 +699,7 @@ carrierid
 carrierids
 carrierimages
 Carta
+Časar
 cascadia
 cascadiacode
 Cassi
@@ -869,6 +875,7 @@ Codicons
 codingeverything
 codingoutloud
 Coie
+Colab
 Colasurdo
 colla
 Collab
@@ -1222,6 +1229,7 @@ destructured
 detab
 detailz
 DeTella
+Dethatch
 detro
 dev’s
 devaccess
@@ -1439,6 +1447,7 @@ EHARS
 ehem
 Ehrhorn
 Eich
+Eira
 Elad
 elad_bezalel
 Elaney
@@ -1801,6 +1810,7 @@ gatekeeping
 gatsby
 gatsbyjs
 Gault
+gcasar
 gcckc
 gcinfo
 gdate
@@ -1932,6 +1942,7 @@ greenkeeper
 greenshift
 Greenwashing
 gregjoeval
+Gregor
 Gregorek
 gress
 Grewenig
@@ -2159,6 +2170,7 @@ Humio
 Humira
 Hupe
 Hurlbut
+Hutcherson
 Hutchins
 Hutt
 Hwang
@@ -2179,6 +2191,7 @@ icmp
 ICWA
 idcard
 Idempotency
+identicons
 IDIQ
 IDRP
 Ierusalimschy
@@ -2311,10 +2324,12 @@ ISNUMERIC
 Isoflurane
 isolatedmodules
 isset
+istester
 isupper
 ISVs
 isyieldable
 italicexample
+Itamar
 itemgetter
 itemprop
 itemssource
@@ -2597,6 +2612,7 @@ Lamport
 LANDESK
 langdiv
 languagedetection
+langword
 Lantas
 Lapan
 Laravel
@@ -2616,6 +2632,7 @@ Lavine
 laxbreak
 laxcomma
 Lazarz
+Lazer
 lazyimages
 lazyload
 lazysizes
@@ -2968,6 +2985,7 @@ micropayment
 microsec
 Microservice
 microservices
+microsite
 microsoftedge
 microtasks
 Middlebury
@@ -2997,6 +3015,7 @@ minmax
 minoritized
 minrep
 mintime
+Mintlify
 mintty
 mipsytipsy
 Miracast
@@ -3181,6 +3200,7 @@ Needz
 Neehar
 Neehar’s
 neeharv
+Neeva
 neilding
 Nenni
 neopronouns
@@ -3214,6 +3234,7 @@ NEWID
 newindex
 newing
 newproxy
+Newsfeed
 Newshour
 newtonking
 Newtonsoft
@@ -3267,6 +3288,7 @@ nofollows
 NOINDEX
 NOL
 nolint
+nolock
 nologo
 NOLS
 nomadtechie
@@ -3703,6 +3725,7 @@ poststates
 posttype
 potch
 Poth
+Pouille
 powerbi
 powerbigov
 powerlevel
@@ -3821,6 +3844,7 @@ psobject
 psql
 psybercity
 ptmalloc
+PTSD
 publicportal
 PUBPLAT
 pullrequest
@@ -4162,6 +4186,7 @@ rticks
 rtrim
 RTTV
 rubberband
+rubberduck
 rubydwarf
 Ruebbelke
 rulename
@@ -4210,6 +4235,7 @@ sameorigin
 Samer
 samerbuna
 samlbest
+samliew
 Samo
 samplerate
 SAMS
@@ -4292,6 +4318,7 @@ securityadmin
 SEDE
 seealso
 Segoe
+Seidman
 selaux
 selectednode
 selectlist
@@ -4455,6 +4482,7 @@ Slover
 Sludgehammer
 slugify
 Slytherin
+smalldatetime
 SMALLINT
 Smartify
 Smartsheet
@@ -4479,6 +4507,7 @@ SNOMED
 Snowpack's
 snowpackjs
 Snowsight
+SNRI
 Snyk
 Sobject
 SOBM
@@ -4583,6 +4612,7 @@ stagingground
 StagingGround_Reeval
 Stanco
 standups
+starcoder
 starlark
 starlims
 startid
@@ -5122,6 +5152,7 @@ unmark
 Unmerge
 Unmerging
 unminified
+Unmoderated
 Unmount
 Unmounting
 unmounts
@@ -5145,6 +5176,7 @@ unsanitized
 unscoped
 Unsets
 Unshift
+unshovel
 unshown
 unsized
 unsplit
@@ -5178,6 +5210,7 @@ upsell
 Upsert
 upserts
 upskill
+Upstash
 upstreamed
 upvalue
 upvalues
@@ -5485,6 +5518,7 @@ Wireframe
 Wireframes
 wireframing
 Wireshark
+Wispr
 Wistia
 Witalec
 Witcher

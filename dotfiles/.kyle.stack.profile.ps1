@@ -89,3 +89,11 @@ function so-test-unit {
         --logger "console;verbosity=normal"
 }
 
+function so-datadog {
+    # make sure data dog exists
+    if (!(Test-Path -Path "C:\code\DogStatsMonitor")) {
+        git clone git@github.com:StackEngLabs/DogStatsMonitor.git "C:\code\DogStatsMonitor"
+    }
+    # start socket server
+    dotnet run --project C:\code\DogStatsMonitor\src\DogStatsMonitor\DogStatsMonitor.csproj
+}
