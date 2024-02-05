@@ -33,6 +33,7 @@ acord
 acornjs
 actboy
 Actionables
+activatable
 activedescendant
 Acura
 ACWY
@@ -98,6 +99,7 @@ ahsvdh
 AICPA
 AIRA
 Airtable
+AIUI
 Aiyana
 ajaxify
 AKID
@@ -357,6 +359,7 @@ authgrant
 authorable
 authorlist
 Authy
+autobuild
 autocomment
 autocompleteclose
 autocompleting
@@ -427,6 +430,7 @@ backfill
 backfilling
 backflip
 backgrounding
+backlink
 Backman
 backoff
 backreference
@@ -641,6 +645,7 @@ buildhelper
 buildless
 buildx
 builtins
+Bulajewski
 bulkinsert
 bulleted
 bulletproofmeteor
@@ -728,6 +733,7 @@ CEOs
 Cerri
 certmgr
 Ceviche
+Chabad
 Chabanovskii
 chaijs
 Chaijs
@@ -742,6 +748,7 @@ Chargify
 chartjs
 Chartreux
 chasetype
+Chatbot
 chatbots
 chatgpt
 chatrooms
@@ -863,6 +870,7 @@ codepaths
 codepen
 codepoint
 codepoints
+codeql
 codesandbox
 codeset
 codesnap
@@ -894,6 +902,7 @@ colspans
 Colston
 columnheader
 columnifexists
+COLUMNPROPERTY
 Columnstore
 combinator
 commandline
@@ -920,6 +929,7 @@ computersystem
 coms
 concat
 concating
+concensus
 Concerta
 cond
 Condé
@@ -927,6 +937,7 @@ Configurability
 configurationmanager
 Configurator
 Conicelli
+connectapi
 Connell
 connellw
 Connelly
@@ -1014,6 +1025,7 @@ Crosswordle
 Crunchbase
 cryptoo
 cryptosystem
+CSAM
 CSAT
 CSELS
 csharplang
@@ -1086,6 +1098,7 @@ darkreader
 darkred
 darksalmon
 darkviolet
+darlal
 Darron
 Darw
 databank
@@ -1107,6 +1120,7 @@ datasources
 Datatable
 Datatables
 datatip
+dataview
 dateadd
 datediff
 DATEFROMPARTS
@@ -1342,6 +1356,7 @@ Donskoy
 dont
 Dont's
 Doomscrolling
+dotenv
 dotfiles
 dotnetcore
 dotnettools
@@ -1673,6 +1688,7 @@ FIPS
 Fira
 firacode
 Firely
+Fireship
 Firestein
 Firestore
 firstmindset
@@ -1842,6 +1858,7 @@ getallqs
 getattr
 getdate
 getelementtraceback
+getenv
 getfenv
 getify
 getinfo
@@ -1857,6 +1874,7 @@ ghostdriver
 Ghostery
 Ghostie
 giamir
+Giamir
 Giannis
 Giasson
 Gidda
@@ -2030,6 +2048,7 @@ hasconsent
 hashbang
 hashcat
 hashnode
+hashset
 Hashsets
 hashtable
 hashtables
@@ -2187,6 +2206,7 @@ iadd
 Iannone
 iban
 Ibrahim
+icls
 icmp
 ICWA
 idcard
@@ -2223,6 +2243,7 @@ imaskjs
 IMAT
 Imba
 imgur
+Imgur
 imgurdl
 imgurgitate
 imgurl
@@ -2295,9 +2316,11 @@ Intelli
 Intellicode
 internalid
 internalids
+Interruptibility
 interruptible
 interwebs
 introspectable
+ints
 Intuniv
 inval
 Invitae
@@ -2323,6 +2346,7 @@ ISNULL
 ISNUMERIC
 Isoflurane
 isolatedmodules
+isqrt
 isset
 istester
 isupper
@@ -2342,6 +2366,7 @@ Ivanti
 IXSRF
 Izakaya
 ized
+Jailbreaking
 Jakob’s
 Jamboard
 Jamey
@@ -2808,6 +2833,7 @@ luacheckrc
 luaparse
 luarocks
 Lucene
+Lucey
 Luciana
 Lucida
 Lucidspark
@@ -2897,6 +2923,7 @@ materialdesignicons
 mathematica
 mathjax
 mathoverflow
+MathOverflow
 matthargett
 matthewjberger
 mattkander
@@ -2988,6 +3015,7 @@ Microservice
 microservices
 microsite
 microsoftedge
+microtask
 microtasks
 Middlebury
 middlewares
@@ -3088,6 +3116,7 @@ motdotla
 Moto
 Motts
 mousedown
+mousemove
 movember
 movieplayer
 mozfullscreenchange
@@ -3203,6 +3232,7 @@ Neehar’s
 neeharv
 Neeva
 neilding
+nektos
 Nenni
 neopronouns
 Neovim
@@ -3300,6 +3330,7 @@ nonblanks
 nonblock
 Nonclustered
 noninteractive
+nonpassive
 nonpublished
 nonrecursive
 nonrepudiation
@@ -3502,8 +3533,10 @@ Outdented
 outdir
 outfile
 Outfront
+Outro
 overadjusted
 Overear
+OverflowAI
 Overlayed
 overloadable
 overridable
@@ -3561,6 +3594,7 @@ paren
 parens
 Pariss
 parkingaddress
+Parrigin
 Parseable
 partnerimagelink
 partytime
@@ -3701,6 +3735,7 @@ ponyfill
 poolhours
 popd
 popperjs
+popstate
 porcello
 Porterwood
 Portman
@@ -3775,6 +3810,7 @@ prefill
 prefilled
 prefills
 Prefilter
+prefixer
 Preformatted
 Prefs
 pregunta
@@ -3843,6 +3879,7 @@ PRPL
 pscustomobject
 psobject
 psql
+psscriptanalyzer
 psybercity
 ptmalloc
 PTSD
@@ -4119,6 +4156,7 @@ Riso
 Rizzo
 rjpeart
 RLHF
+rmarkiewicz
 rmdir
 roact
 Roact's
@@ -4214,6 +4252,7 @@ ryanve
 Rychko
 rychkog
 Ryman
+Rynnstar
 Ryokan
 Saas
 saasplus
@@ -4242,6 +4281,7 @@ samplerate
 SAMS
 samsclub
 samsmithnz
+samtay
 sandboxed
 sandboxing
 sandermvanvliet
@@ -4250,6 +4290,8 @@ Sangeeta
 sanitizable
 sapegin
 Sargable
+Sargeant
+SARIF
 Sarpa
 Sashko
 SATA
@@ -4386,6 +4428,7 @@ SHAs
 Shashank
 Shatney
 Shattuck
+Shavuos
 Shawshank
 Shayla
 Shebbeare
@@ -4827,6 +4870,7 @@ Tealium
 teamcity
 techbld
 Techmakers
+Technica
 TechTonica
 Tedeschi
 Tedesco
@@ -4900,6 +4944,7 @@ Thrombocytopenia
 Thunar
 Tidyverse
 tiene
+tiktoken
 Tilda
 timebound
 Timebox
@@ -4936,10 +4981,12 @@ Todoist
 todoistjs
 todomd
 todos
+Todos
 Toggl
 toggler
 toid
 toint
+tokeniser
 tolocalestring
 tombstoning
 Tomchak
@@ -5180,6 +5227,7 @@ Unshift
 unshovel
 unshown
 unsized
+unsourced
 unsplit
 Unstage
 unstaged
@@ -5256,6 +5304,7 @@ Uyuni
 vaadin
 vabgujral
 Vacay
+Vadan
 Vaibhav
 Vakharia
 Vakil
@@ -5358,10 +5407,12 @@ visualisation
 visualstudio
 Vite
 vitejs
+Vitest
 VITL
 Viveret
 Vlocity
 Vlog
+vmwosqext
 VNET
 vnext
 vnode
@@ -5408,6 +5459,7 @@ Wahlberg
 Wahlin
 Waikem
 waitlist
+Waitlisted
 Waitsfield
 walkthrough
 walkthroughs
@@ -5423,6 +5475,7 @@ Wavelight
 Wayfair
 Wbem
 WCAG
+Weaviate
 weba
 webanalyzer
 webapps
