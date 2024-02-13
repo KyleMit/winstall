@@ -97,3 +97,7 @@ function so-datadog {
     # start socket server
     dotnet run --project C:\code\DogStatsMonitor\src\DogStatsMonitor\DogStatsMonitor.csproj
 }
+
+function so-ssms {
+    C:\Windows\System32\runas.exe /user:STACKEXCHANGE\kmitofsky "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe"
+}
