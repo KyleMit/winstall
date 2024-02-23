@@ -76,3 +76,5 @@ function Invoke-InstallNewApps {
 
 }
 
+# command to look for and install app updates
+
