@@ -48,3 +48,13 @@ function git-revert-eol-only {
 
     $blankOnly | ForEach-Object { git restore "$root/$_" }
 }
+
+function Load-Env {
+    param (
+        [string]$Path = ".env"
+    )
+    Get-Content $Path | ForEach-Object {
+        $parts = $_ -split '=', 2 #at most two parts
+        [System.Environment]::SetEnvironmentVariable($parts[0], $parts[1], [System.EnvironmentVariableTarget]::Process)
+    }
+}

@@ -579,6 +579,7 @@ bootcamp’s
 Bootcamps
 Bootstrapper
 bootup
+borked
 boro
 Boryana
 BOSCC
@@ -635,6 +636,7 @@ BTVWAG
 Buamann
 bubenshchykov
 Bublé
+Bubriski
 Buchheim
 Budhani
 Bugbee
@@ -650,6 +652,7 @@ bulkinsert
 bulleted
 bulletproofmeteor
 bungcip
+Buoncristiani
 Burgiss
 Burleson
 Burmilla
@@ -697,6 +700,7 @@ Carbee
 Cardano
 Cardstyles
 CAREWARE
+Carlston
 carmalou
 Caro
 Carriere
@@ -731,7 +735,9 @@ CELR
 Centerpoint
 CEOs
 Cerri
+certbot
 certmgr
+certonly
 Ceviche
 Chabad
 Chabanovskii
@@ -789,6 +795,7 @@ chunkname
 Cialdini
 ciaranj
 CICD
+Cicman
 cids
 Cieślar
 Ciliberto
@@ -814,6 +821,7 @@ clickable
 clickanalytics
 clickonce
 ClickOnce
+clickops
 clientd
 clienttoken
 Clippy
@@ -836,6 +844,7 @@ cmds
 Cmendez
 CMMI
 cmops
+CNAB
 CNAME
 Cnotes
 Coapplicant
@@ -1207,6 +1216,7 @@ Demler
 demo'd
 demoable
 Deno
+denolehov
 Denormalization
 Denormalize
 denormalized
@@ -1576,6 +1586,7 @@ Excella
 execsh
 executiontime
 Exercism
+exif
 exitable
 exitables
 exitzero
@@ -1712,6 +1723,7 @@ Flotiq
 flowconfig
 flowtype
 Fluin
+Flurl
 Fluxible
 Flyout
 flyx's
@@ -1965,6 +1977,7 @@ Gregorek
 gress
 Grewenig
 Gridlayout
+Groq
 Grosvner
 Groupable
 groupbox
@@ -2088,6 +2101,7 @@ Heffernon
 Hefferon
 Heide
 Heinemeier
+Hellang
 hellip
 hellofunc
 hellomake
@@ -2122,6 +2136,7 @@ hireme
 HiRez
 histfile
 HISTFILESIZE
+historyid
 HISTSIZE
 HKCU
 HKEY
@@ -2183,6 +2198,7 @@ HTTPSYS
 httptrigger
 hubner
 hubspot
+Hudl
 Hufflepuff
 Hulu
 Humio
@@ -2366,6 +2382,7 @@ Ivanti
 IXSRF
 Izakaya
 ized
+Jackbox
 Jailbreaking
 Jakob’s
 Jamboard
@@ -2473,6 +2490,8 @@ Jupyter
 jupyterlab
 justinfagnani
 justinribeiro
+Juul
+jzhang
 Kaba
 Kaden
 Kaden’s
@@ -2508,6 +2527,7 @@ Kelly
 kelseyhightower
 Kemper
 Kemple
+Kendamil
 Kenna
 Kennebunk
 kennethlarsen
@@ -2605,6 +2625,7 @@ Krusader
 KTLO
 ktrz
 kubectl
+kubernetes
 Kubernetes
 KUBEVAL
 Kübler
@@ -2614,6 +2635,7 @@ kulkarni
 Kunz
 Kuppens
 Kurata
+Kurian
 kuronekomichael
 Kusto
 Kutcher
@@ -2651,6 +2673,7 @@ lastchanged
 lastmod
 lastname
 Lastpass
+Latine
 latinx
 Lato
 Lavine
@@ -2697,6 +2720,7 @@ Lerman
 Lesh
 lessonly
 Letharging
+letsencrypt
 Lettable
 letteers
 Leung
@@ -2836,6 +2860,7 @@ Lucene
 Lucey
 Luciana
 Lucida
+Lucidchart
 Lucidspark
 Ludum
 luin
@@ -2989,6 +3014,7 @@ metamethods
 Metas
 metase
 metaso
+metastackexchange
 metatable
 metatables
 Metcalf
@@ -3014,6 +3040,7 @@ microsec
 Microservice
 microservices
 microsite
+microsoftazurestorageexplorer
 microsoftedge
 microtask
 microtasks
@@ -3188,6 +3215,7 @@ Nagle
 NAIC
 Nailor
 Nakahado
+Nakahodo
 Nalla
 namecall
 nameof
@@ -3214,6 +3242,7 @@ nchar
 NCHHSTP
 nchor
 NCLBUTTONDOWN
+ncmec
 NCQA
 NCRONTAB
 ndash
@@ -3249,6 +3278,7 @@ netonly
 networkpost
 Neue
 Neuro
+neurodivergence
 neurodivergent
 Neurodiversity
 neurofeedback
@@ -3643,6 +3673,7 @@ Performology
 perfreport
 pergunta
 Perianal
+Perkbox
 Perma
 permalinks
 permissionset
@@ -3684,6 +3715,7 @@ piecemealed
 Piero
 Pigmeat
 Pihrt
+pii
 Pincode
 pinfo
 pinnable
@@ -3837,6 +3869,7 @@ Previewable
 Prevote
 Prevotes
 prez
+prhelp
 Prijck
 PrimeNG
 printenv
@@ -3883,6 +3916,7 @@ psscriptanalyzer
 psybercity
 ptmalloc
 PTSD
+PTTL
 publicportal
 PUBPLAT
 pullrequest
@@ -3929,6 +3963,7 @@ quickopen
 quickstart
 quicktype
 Quinstreet
+quiplash
 Quizitive
 qunit
 Quora
@@ -4354,6 +4389,7 @@ Seabiscuit
 searchallowed
 searchbox
 Searls
+seatmap
 sebmarkbage
 Secor
 securables
@@ -4491,6 +4527,7 @@ Silverlight
 Simard
 similarquestions
 Simms
+Simmy
 simonhaenisch
 SIMPLEOBJECT
 Sindre
@@ -4608,6 +4645,7 @@ spritify
 SPSS
 Spyder
 spys
+sqids
 sqip
 SQLAG
 SQLCL
@@ -4625,6 +4663,7 @@ srcset
 SREREQ
 srte
 SSAS
+SSCAN
 SSDT
 SSIS
 SSMS
@@ -4776,6 +4815,7 @@ suspensible
 Suter
 Suter's
 Suzzette
+svalbuena
 svgexport
 svgr
 SVGs
@@ -4800,6 +4840,7 @@ symlinks
 Syncfusion
 synchronistic
 syncpack
+syncthing
 Syncytial
 Syndney
 syntaxhighlight
@@ -4936,6 +4977,7 @@ thisjavascript
 thispet
 thompsonco
 thon
+Thoughtworks
 threadable
 Threadable
 Threadline
@@ -5058,6 +5100,7 @@ Trix
 trixnz
 trol
 Trombeta
+troygould
 Truecar
 Trumba
 trunc
@@ -5281,6 +5324,7 @@ URQL
 USAA
 usdl
 usecases
+Usercard
 userconfig
 userdata
 userflags
@@ -5410,6 +5454,7 @@ vitejs
 Vitest
 VITL
 Viveret
+Vliet
 Vlocity
 Vlog
 vmwosqext
@@ -5595,6 +5640,7 @@ WORKDIR
 workfloworchestrator
 Workfront
 Workgroup
+workingremote
 Workphone
 Workset
 Workspace

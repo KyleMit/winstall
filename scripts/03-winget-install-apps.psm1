@@ -30,7 +30,8 @@ $apps = (
     "Facebook.Messenger",
     "JanDeDobbeleer.OhMyPosh",
     "Adobe.Acrobat.Reader.64-bit",
-    "AgileBits.1Password"
+    "AgileBits.1Password",
+    "Insomnia.Insomnia"
 )
 
 function Test-InstallApps {
