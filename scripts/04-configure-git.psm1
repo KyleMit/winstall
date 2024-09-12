@@ -12,4 +12,5 @@ function Invoke-ConfigureGit {
     git config --global user.name "kylemit"
     git config --global user.email "Kylemit@gmail.com"
     git config --global init.defaultBranch main
+    git config --global checkout.defaultRemote origin
 }

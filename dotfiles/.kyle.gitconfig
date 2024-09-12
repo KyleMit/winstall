@@ -22,14 +22,14 @@
 [alias]
 	# show all aliases
 	alias = --list-cmds=alias
+	# open settings file
+	settings = !code ~/.kyle.gitconfig
 	# send empty commit to re-trigger build server
 	nudge = !git commit --allow-empty -m 'trigger build' && git push
 	# remove all local changes / files
 	nuke = !git reset --hard HEAD && git clean -xfd
 	# rollback the most recent commit and plaec in staging
 	undo = reset --soft HEAD~1
-	# checkout
-	co = checkout
 	# checkout previous commit
 	prev = checkout HEAD~1
 	# add local changes to previous commit
@@ -40,6 +40,22 @@
 	amend = commit --amend
 	# force push
 	fp = push --force-with-lease
+	# speed up local git
+	speedup = !git gc && git prune
+	# debug git subshell
+	echo = "!f() { \
+        echo \"First arguments: $1\"; \
+        echo \"Second argument: $2\"; \
+        echo \"All arguments: $@\"; \
+    }; f"
+	# checkout - shorter and fetch tolerant
+    co = "!f() { \
+        git checkout \"$@\" 2>/dev/null || { \
+            echo 'Branch not found, fetching remote branches...'; \
+            git fetch && \
+            git checkout \"$@\"; \
+        }; \
+    }; f"
 	# remove all local branches except default
 	cleanup = "!f() { \
 		defaultBranch=$(git rev-parse --abbrev-ref origin/HEAD | sed 's/origin\\///'); \

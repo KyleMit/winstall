@@ -31,7 +31,8 @@ $apps = (
     "JanDeDobbeleer.OhMyPosh",
     "Adobe.Acrobat.Reader.64-bit",
     "AgileBits.1Password",
-    "Insomnia.Insomnia"
+    "Insomnia.Insomnia",
+    "jqlang.jq"
 )
 
 function Test-InstallApps {
