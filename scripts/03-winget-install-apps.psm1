@@ -32,7 +32,10 @@ $apps = (
     "Adobe.Acrobat.Reader.64-bit",
     "AgileBits.1Password",
     "Insomnia.Insomnia",
-    "jqlang.jq"
+    "jqlang.jq",
+    "WiresharkFoundation.Wireshark",
+    "Google.AndroidStudio",
+    "Insecure.Npcap"
 )
 
 function Test-InstallApps {
