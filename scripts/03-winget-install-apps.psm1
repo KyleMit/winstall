@@ -5,7 +5,7 @@ $apps = (
     "7zip.7zip",
     "Armin2208.WindowsAutoNightMode",
     "Microsoft.AzureStorageExplorer",
-    "Chocolatey.ChocolateyGUI",
+    "Chocolatey.Chocolatey",
     "Elgato.ControlCenter",
     "Git.Git",
     "GitHub.cli",
@@ -35,7 +35,9 @@ $apps = (
     "jqlang.jq",
     "WiresharkFoundation.Wireshark",
     "Google.AndroidStudio",
-    "Insecure.Npcap"
+    "Insecure.Npcap",
+    "Doist.Todoist",
+    "Obsidian.Obsidian"
 )
 
 function Test-InstallApps {

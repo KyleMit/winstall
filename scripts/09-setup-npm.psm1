@@ -1,7 +1,8 @@
 
 $npmApps = @(
     "git-dirs",
-    "@kylemit/cli-ls"
+    "@kylemit/cli-ls",
+    "typescript"
 )
 
 function Test-ConfigureDefaultApps {
