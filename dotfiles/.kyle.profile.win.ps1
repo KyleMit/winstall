@@ -1,3 +1,4 @@
+
 # cli config
 oh-my-posh init pwsh --config $env:USERPROFILE\.kyle.omp.yaml | Invoke-Expression
 

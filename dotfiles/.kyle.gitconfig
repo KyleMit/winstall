@@ -4,6 +4,12 @@
 	preloadindex = true # perf
 	fscache = true # perf
 
+[checkout]
+	defaultRemote = origin
+
+[http]
+	postBuffer = 524288000
+
 [gc]
 	auto = 256 # perf
 

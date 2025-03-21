@@ -60,5 +60,5 @@ blocks:
   - type: text
     foreground: "#B48EAD"
     style: plain
-    template: "{{ if eq \"bash\" .Shell }}${{ else }}\u276F{{ end }}"
+    template: "{{ if or (eq \"zsh\" .Shell) (eq \"bash\" .Shell) }}${{ else }}\u276F{{ end }}"
 
