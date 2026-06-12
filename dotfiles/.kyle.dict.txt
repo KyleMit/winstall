@@ -64,6 +64,7 @@ adlythebaud
 adnammit
 adops
 adoptacustomer
+Adora
 adptotalsource
 Adrianna
 adsvdh
@@ -104,6 +105,7 @@ AIUI
 Aiyana
 ajaxify
 AKID
+Akismet
 Alaina
 Alanis
 Alanna
@@ -385,6 +387,7 @@ Autoload
 automagically
 Automapper
 Automatable
+automations
 automator
 autopay
 autopep8
@@ -445,6 +448,7 @@ Baffoni
 Bahmutov
 bain
 Balasubramanian
+balkanizing
 balpha
 Balsamiq
 Baltich
@@ -597,6 +601,7 @@ Boudrias
 Boutar
 Bowens
 Boyden
+Boyscout
 Bpassword
 Brabender
 bradwellsb
@@ -651,6 +656,7 @@ bugbeep
 Bugz
 buildhelper
 buildless
+buildtransitive
 buildx
 builtins
 Bulajewski
@@ -721,6 +727,7 @@ Cassi
 Casteneda
 castl
 Castlevania
+catastrophize
 Catastrophizing
 categorysort
 Catija
@@ -734,6 +741,7 @@ CCPA
 CCWIS
 CDJR
 cdnjs
+cdso
 CEDEX
 cellpadding
 cellspacing
@@ -773,6 +781,7 @@ Checkhealth
 Checkin
 checkjs
 checkmark
+checkmarks
 cheerlead
 Cheetoh
 Chenkie
@@ -920,6 +929,8 @@ columnifexists
 COLUMNPROPERTY
 Columnstore
 combinator
+Comfortability
+commandfor
 commandline
 commandmetadata
 commentid
@@ -1292,6 +1303,7 @@ dezipped
 Dhami
 DHIS
 DHMC
+Diagnoser
 Dialpad
 Diffable
 difftime
@@ -1423,6 +1435,7 @@ Duarte
 Ducharme
 DUIs
 Dumke
+Dumke-von
 duplicative
 durandal
 Durrel
@@ -1519,6 +1532,7 @@ encour
 encryptor
 endeavours
 endem
+endfor
 endforeach
 endkbd
 endoftext
@@ -1560,6 +1574,7 @@ esbenp
 esbuild
 eseom
 eslint's
+eslintcache
 eslintignore
 ESNEXT
 España
@@ -1680,6 +1695,7 @@ FHIR
 fiagency
 Fialkowski
 Fibbage
+Fidium
 fielddata
 fieldset
 fieldtrials
@@ -1805,6 +1821,7 @@ fullpay
 fullscreen
 fullwidth
 funcs
+functioner
 functools
 furbabies
 furballs
@@ -1860,11 +1877,13 @@ Geeksfor
 Geeta
 Geico
 Gemba
+genai
 Genc
 Genç
 Genda
 genderqueer
 generalmanager
+generativelanguage
 genericize
 geolocated
 geolocation
@@ -2060,6 +2079,7 @@ hardcode
 hardkoded
 hardlinked
 Hargett
+harrydowning
 HARS
 Harter
 Hartl
@@ -2192,6 +2212,7 @@ howers
 howto
 howtoask
 HPDP
+HPIS
 hreflang
 HREFs
 HRESULT
@@ -2355,6 +2376,8 @@ ionutvmi
 ipairs
 IPDF
 Iphone
+IPQS
+ipynb
 IQIP
 Irina
 isaccepted
@@ -2362,6 +2385,7 @@ isalpha
 isanswered
 isavailable
 isinstance
+ISJSON
 islice
 islist
 islower
@@ -2374,6 +2398,7 @@ Isoflurane
 isolatedmodules
 isqrt
 isset
+issuetype
 istester
 isupper
 ISVs
@@ -2432,6 +2457,7 @@ Jetbrains
 JFDI
 jfif
 jhgoenroll
+Jianxuan
 jimevansmusic
 Jimi
 Jina
@@ -2472,6 +2498,7 @@ jscheck
 jschwanz
 jsclient
 jscodeshift
+jscoverage
 jsdiff
 jsdocs
 jsdom
@@ -2483,6 +2510,7 @@ jsmodule
 Json's
 JsonIgnore
 jsonschema
+jspm
 jstolua
 jsutils
 jsxdev
@@ -2580,6 +2608,7 @@ Kinnon
 kinokrad
 Kinoshita
 Kirn
+Kirti
 Kiteworks
 Kito
 Kiwix
@@ -2629,6 +2658,7 @@ Krieger
 Kristensen
 kristinalustig
 Kristle
+kristoff
 Krueger
 krug
 Krusader
@@ -2656,6 +2686,7 @@ kylemitnewest
 kylemitofskysp
 kylemittest
 Kyth
+kyverno
 labelledby
 lacinia
 LADC
@@ -2722,6 +2753,7 @@ leftnav
 leftright
 Legendborn
 Legos
+leidwesen
 Leipert
 Lekova
 Lenahan
@@ -2895,6 +2927,7 @@ Madlib
 Magento
 Magit
 Mahbubul
+Maher
 Mahoney
 Maida
 mainbar
@@ -3105,6 +3138,7 @@ mjolinor's
 mkdir
 mkdocs
 mklink
+mlflow
 MLOC
 mlock
 mluskind
@@ -3119,6 +3153,7 @@ modalorpopover
 Moded
 modelstate
 moderatormessage
+modsupport
 Modulification
 modulified
 Modulify
@@ -3255,6 +3290,7 @@ NCLBUTTONDOWN
 ncmec
 NCQA
 NCRONTAB
+ncrunchproject
 ndash
 NDPP
 Nebelung
@@ -3393,6 +3429,7 @@ norming
 Norsk
 noscript
 NOSIZE
+nosniff
 nospace
 nosql
 nostyle
@@ -3500,6 +3537,8 @@ Omada
 Omark
 Omegle
 omnisharp
+Onat
+onatm
 Onbase
 onbeforeunload
 onboarders
@@ -3565,6 +3604,7 @@ ORMs
 Orthanc
 Osama
 OSAMM
+osascript
 Osmani
 Oster
 osxkeychain
@@ -3577,6 +3617,7 @@ Outfront
 Outro
 overadjusted
 Overear
+Overfitting
 OverflowAI
 Overlayed
 overloadable
@@ -3594,6 +3635,7 @@ Oximeter
 Ozar
 Ozols
 Paas
+pabbie
 Pachi
 PACIA
 PACKAGEVERSION
@@ -3743,6 +3785,7 @@ Pizzatime
 Pkce
 pkgid
 pkgs
+pkill
 pkuleon
 placeholdertext
 Planview
@@ -3896,6 +3939,7 @@ probot
 processname
 Procs
 prodserver
+productionize
 Productization
 proget
 projectkudu
@@ -3918,6 +3962,7 @@ Prosus
 proto
 protobuf
 protolock
+Protos
 prototypejs
 proxied
 PRPL
@@ -3948,6 +3993,7 @@ PWA's
 PWAs
 PWDCOMPARE
 pwsh
+pyfunc
 Pyles
 pylint
 pyro
@@ -3955,6 +4001,7 @@ pytest
 pythonic
 qase
 QDIA
+qheaden
 qids
 QL’s
 QLID
@@ -4149,6 +4196,7 @@ reratedeals
 rerender
 rerendering
 rereview
+rescan
 Resendes
 resetthread
 Resharper
@@ -4310,6 +4358,7 @@ Sadalage
 Safeco
 safeconow
 safecrlf
+safetensors
 Sahin
 Sakura
 Salesforce
@@ -4335,6 +4384,7 @@ sandermvanvliet
 Sanderson
 Sangeeta
 sanitizable
+Sankey
 sapegin
 Sargable
 Sargeant
@@ -4451,6 +4501,7 @@ setlist
 setmetatable
 setopt
 setrlimit
+Setu
 setuid
 setvariable
 setx
@@ -4546,6 +4597,7 @@ SIMPLEOBJECT
 Sindre
 sindresorhus
 Singapura
+singlefile
 singlepoint
 singlequotes
 Siri
@@ -4578,6 +4630,7 @@ slugify
 Slytherin
 smalldatetime
 SMALLINT
+SMARTHQ
 Smartify
 Smartsheet
 Smashicons
@@ -4643,6 +4696,7 @@ speedlify
 Speedline
 speedrun
 speedrunners
+Spevacus
 spherion
 Sphynx
 SPII
@@ -4700,6 +4754,7 @@ stackex
 stackexchange
 stackid
 stackmail
+stackmeet
 stackoverflow
 stackoverflowteams
 Stackronyms
@@ -4761,6 +4816,7 @@ studds
 Sturtevant
 styleguidist
 Stylelint
+stylelintcache
 Stylesheet
 Stylesheets
 stylua
@@ -4787,6 +4843,7 @@ submodules
 subpackages
 subpane
 subpath
+subpixels
 subqueries
 subquery
 Subramanian
@@ -4829,6 +4886,7 @@ Suter
 Suter's
 Suzzette
 svalbuena
+Sveltekit
 svgexport
 svgr
 SVGs
@@ -4966,6 +5024,7 @@ textbox
 textboxes
 texted
 Textfield
+tgrosinger
 Thayer
 thead
 Theanine
@@ -5038,6 +5097,7 @@ todomd
 todos
 Todos
 Toggl
+togglable
 toggler
 toid
 toint
@@ -5071,6 +5131,7 @@ toupdate
 Townhall
 Toyger
 tput
+tqdm
 traceback
 tracebacks
 trackby
@@ -5111,6 +5172,7 @@ Trinh
 Tripp
 Trix
 trixnz
+Trocchio
 trol
 Trombeta
 troygould
@@ -5302,6 +5364,8 @@ Unupvoted
 unvalidated
 unversioned
 Unviewed
+Unwatch
+Upadhya
 updateable
 updatepanel
 Updation
@@ -5462,8 +5526,10 @@ Visio
 Visualforce
 visualisation
 visualstudio
+Visvesvaran
 Vite
 vitejs
+vitepress
 Vitest
 VITL
 Viveret
@@ -5496,6 +5562,7 @@ vsinder
 vsintellicode
 vsix
 vsliveshare
+VSOMU
 vsphere
 vstfs
 vsto
@@ -5509,6 +5576,7 @@ Vue's
 Vue’s
 Vueing
 vuejs
+vuepress
 Vuetify
 vuetifyjs
 vuex
@@ -5532,6 +5600,7 @@ Wathan
 Wavelight
 Wayfair
 Wbem
+WBIT
 WCAG
 Weaviate
 weba
@@ -5666,7 +5735,9 @@ wpfdatagrid
 wrds
 Wrike
 writability
+wscript
 wsex
+wsnc
 wsokra
 WWCDD
 wwwroot
@@ -5732,12 +5803,14 @@ Zaefferer
 Zak's
 zalmoxisus
 zampieri
+Zapier
 zayo
 zblesk
 Zeigarnik
 zekesonxx
 Zell
 zendframework
+Zepbound
 Zeplin
 zerodarkmatrix
 zeuxcg

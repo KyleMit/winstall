@@ -13,22 +13,26 @@ eval "$(oh-my-posh init zsh --config ~/.kyle.omp.yaml)"
 
 # set aliases
 alias cls="clear"
+alias python=python3
+alias pip=pip3
 
 # set functions
-dls() {
+function dls() {
     pushd ~/Code/DevLocalSetup > /dev/null || return
     git pull && sudo ./setup.sh
     popd > /dev/null || return
 }
 
-cdso() {
+function cdso() {
     cd ~/Code/StackOverflow
 }
 
-function npm() {
-  if [[ "$(pwd)" == "$HOME/Code/StackOverflow" ]]; then
-    echo "You need to navigate into the 'StackOverflow' subdirectory before running 'npm i'."
-    return 1
-  fi
-  command npm "$@"
+
+function restart-kestrel() {
+  local plistLinkFile="$HOME/Library/LaunchAgents/com.stackexchange.KestrelProxy.plist"
+
+  launchctl stop com.stackexchange.KestrelProxy
+  launchctl unload $plistLinkFile
+  launchctl load $plistLinkFile
+  launchctl start com.stackexchange.KestrelProxy
 }
